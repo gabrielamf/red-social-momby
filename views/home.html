@@ -23,7 +23,6 @@
 				<a href="#!" class="brand-logo">
 					<img src="../assets/images/logo-nombre.png" alt="#" class="responsive-img logo-nav">
 				</a>
-
 				<!--Side bar-->
 				<ul id="slide-out" class="side-nav">
 					<li>
@@ -64,12 +63,10 @@
 				<!--Fin side bar-->
 				<ul class="right hide-on-med-and-down"></ul>
 				<ul class="side-nav" id="mobile-demo"></ul>
-
 			</nav>
 		</nav>
 	</header>
 	<!--Fin Header-->
-
 	<!--Tabs-->
 	<section>
 		<div class="">
@@ -99,10 +96,10 @@
 			<!--Fin Pestañas-->
 		</div>
 	</section>
-	<!--Fin Tabs-->
-	<!--NEWSFEED-->
-	<section id="newsfeed" class="col s12">
-		<!--Postear -->
+	<!--Newsfeed-->
+	<section>
+		<div id="newsfeed" class="col s12 ">
+			<!--Postear -->
 			<div class="row">
 
 				<!--Área de posteo-->
@@ -159,7 +156,6 @@
 												<h5>Nutrición y Salud</h5>
 											</label>
 										</div>
-
 										<!--Imagen del post-->
 										<div class="card-image">
 											<img src="../assets/images/posts/frutas.jpg">
@@ -192,7 +188,6 @@
 			</div>
 	</section>
 	<!--Fin Newsfeed-->
-
 	<!--AGREGAR AMIGOS-->
 	<section id="friends" class="col s12">
 		<!--Buscador de Amigos y/o Marcas-->
@@ -202,39 +197,88 @@
 					<input placeholder="Buscar: amigos, marcas..." type="text" class="active validate" required />
 					<label for="name"></label>
 				</div>
-			</div>
-			<!--Pestañas AMIGOS|MARCAS-->
-			<div class="row">
-				<div class="col s12">
-					<ul class="tabs">
-						<li class="tab col s3">
-							<a href="#peopple">personas</a>
-						</li>
-						<li class="tab col s3">
-							<a class="active" href="#patent">marcas</a>
-						</li>
-					</ul>
-				</div>
-				<div id="peopple" class="col s12">info de personas</div>
-				<div id="patent" class="col s12">info de marcas</div>
+		</div>
+		<!--Pestañas AMIGOS|MARCAS-->
+		<div class="row">
+			<div class="col s12">
+				<ul class="tabs">
+					<li class="tab col s3">
+						<a href="#peopple">personas</a>
+					</li>
+					<li class="tab col s3">
+						<a class="active" href="#patent">marcas</a>
+					</li>
+				</ul>
 			</div>
 			<!--Visualizar según pestañas: Amigos-->
 			<div class="row"></div>
 			<!--Visualizar según pestañas: Marcas-->
 			<div class="row"></div>
-		</section>
-		</div>
 	</section>
 	<!--Fin agregar amigos-->
-
-	<!--BÚSQUEDA y Blogs-->
-	<section id="search" class="col s12">
+	<!--Búsqueda y Blogs-->
+	<section  id="search" class="col s12">
 		<!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
+		
+		<div class="row input-search">
+		  <div class="input-field col s12">
+				<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+				<label for="first_name">Filtra entre lo más POPULAR, COMENTADO y MÁS VISTO</label>
+				</div>
+			</div>
+			
+		<div class="row" id="container-posts">
+		</div>
 	</section>
+		  <!-- Modal poste -->
+			<div id="modal-post" class="modal">
+					<div class="modal-content">
+							<div class="row">
+									<div class="col s12 m12">
+										<div class="card">
+											<!--Datos del usuario del post-->
+											<div class="col s2 m2">
+												<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
+											</div>
+											<div class="col s8 m8">
+												<label for="user-post">
+													<h5>Nutrición y Salud</h5>
+												</label>
+											</div>
+											<!--Imagen del post-->
+											<div class="card-image">
+												<img src="../assets/images/posts/1.jpg">
+											</div>
+											<!--Texto del post-->
+											<div class="card-content">
+												<p>Feliz Año 2018!!</p>
+											</div>
+											<!--Botones de interacción-->
+											<div class="card-action center">
+												<a href="#">
+													<i class="material-icons">favorite_border</i>
+												</a>
+												<a href="#">
+													<i class="material-icons">comment</i>
+												</a>
+												<a href="#">
+													<i class="material-icons">share</i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					</div>
+				</div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Enlace a Materialize compilado y minificado-->
 	<script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+	<!-- Enlace a archivo JavaScript externo -->
+	<script type="text/javascript" src="../js/data.js"></script>
 	<!-- Enlace a archivo JavaScript externo -->
 	<script type="text/javascript" src="../js/home.js"></script>
 </body>
