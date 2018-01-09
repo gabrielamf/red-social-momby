@@ -1,30 +1,20 @@
 $(document).ready(function() {
   $('.button-collapse').sideNav();
-  var area = document.getElementById('texto');
-  var boton = document.getElementById('boton');
-  var lista = document.getElementById('nuevoEspacio');
-  var restante = document.getElementById('restante');
 
-  boton.addEventListener('click',showText);
-  area.addEventListener('keyup',caracteres);
-  area.addEventListener('keyup',autoSize);
+  var containerPost = $('.card');
+  var area = $('#area-post');
+  var publish = $('#btn-post');
 
-  // Función para mostrar el tweet publicado
-  function  showText() {
-
-    if(area.value) {
-
-      var li = document.createElement('li');
-      var p = document.createElement('p');
-      p.classList.add('hours');
-
-      li.textContent = area.value;
-      p.textContent = addTime();
-      lista.appendChild(li);
-      li.appendChild(p);
-
-      area.value = '';
+  $(publish).on('click', function() {
+    if (area.val()) {
+      var textPost = $('<p/>', {
+        'class': 'text-post'
+      });
+      $(containerPost).append(textPost);
+      textPost.html();
     }
-  }
+  });
+
 
 });
+
