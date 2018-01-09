@@ -38,8 +38,10 @@
 	height: 100vh;
 }
 
-
-
+/* FILTRADO POSTS */
+.input-search {
+	margin-top: 1rem;
+}
 
 
 /* Desktop */

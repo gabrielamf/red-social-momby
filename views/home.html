@@ -23,7 +23,6 @@
 				<a href="#!" class="brand-logo">
 					<img src="../assets/images/logo-completo.png" alt="#" class="responsive-img logo-nav">
 				</a>
-
 				<!--Side bar-->
 				<ul id="slide-out" class="side-nav">
 					<li>
@@ -62,60 +61,48 @@
 					<i class="material-icons">menu</i>
 				</a>
 				<!--Fin side bar-->
-
 				<ul class="right hide-on-med-and-down"></ul>
-
 				<ul class="side-nav" id="mobile-demo"></ul>
-
 			</nav>
 		</nav>
 	</header>
 	<!--Fin Header-->
-
 	<!--Tabs-->
 	<section class="">
 		<div class="">
 			<div class="col s12 m12">
 				<!--Pestañas-->
 				<ul class="tabs">
-
 					<li class="tab col s3 m4">
 						<a class="active" href="#newsfeed">
 							<i class="material-icons">fiber_new</i>
 						</a>
 					</li>
-
 					<li class="tab col s3 m4">
 						<a href="#friends">
 							<i class="material-icons">account_circle</i>
 						</a>
 					</li>
-
 					<li class="tab col s3 m4">
 						<a href="#search">
 							<i class="material-icons">search</i>
 						</a>
 					</li>
-
 				</ul>
 				<!--Fin Pestañas-->
 			</div>
-
 			<div id="newsfeed" class="col s12 ">
 				<!--Postear -->
 				<div class="row">
 					<div class="col s12 m12">
 						<!--Área de posteo-->
 						<div class="card">
-
 							<!--Foto del usuario-->
 							<div class="col s2 m2">
 								<img class="circle responsive-img valign-wrapper" src="../assets/images/user.jpg" alt="foto del usuario">
 							</div>
 							<!--Fin Foto del usuario-->
-
 							<!--Escribir posts-->
-
 							<div class="row">
 								<form class="col s8 m8">
 									<div class="input-field col s12 m12 black-text">
@@ -124,7 +111,6 @@
 								</form>
 								</div>
 								<!--Fin Escribir posts-->
-
 								<!--Botones POSTEAR - ADD PHOTO -->
 								<div class="card-action col s2 m2">
 									<button class="btn-floating waves-effect waves-light send-post" type="submit" name="action">
@@ -135,13 +121,10 @@
 									</button>
 								</div>
 								<!--Fin botones-->
-
 							</div>
 							<!--Fin Área de posteo-->
 						</div>
-
 						<hr>
-
 						<div class="col s12 m12">
 							<div class="row">
 								<!---->
@@ -173,12 +156,10 @@
 										</div>
 									</div>
 								</div-->
-
 								</div>
 								<!--Fin -->
 							</div>
 						</div>
-
 						<div class="col s12 m12">
 							<div class="row">
 								<!--Newsfeed-->
@@ -224,7 +205,6 @@
 					</div>
 				</div>
 			</div>
-
 			<!--AGREGAR AMIGOS-->
 			<section id="friends" class="col s12">
 				<!--Buscador de Amigos y/o Marcas-->
@@ -257,7 +237,20 @@
 			</section>
 
 			<!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
-			<div id="search" class="col s12">Hola test 3</div>
+			<div class="row input-search">
+				<div class="input-field col s12">
+					<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+					<label for="first_name">Filtra entre lo más POPULAR, COMENTADO y MÁS VISTO</label>
+				</div>
+			</div>
+			<div id="container-posts">
+				<div class="row">
+					<div class="col s6">
+						<img class="responsive-img" src="../assets/images/posts/1.jpg">
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</section>
 	<!--Fin Tabs-->
@@ -265,6 +258,8 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Enlace a Materialize compilado y minificado-->
 	<script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+	<!-- Enlace a archivo JavaScript externo -->
+	<script type="text/javascript" src="../js/data.js"></script>
 	<!-- Enlace a archivo JavaScript externo -->
 	<script type="text/javascript" src="../js/home.js"></script>
 </body>
