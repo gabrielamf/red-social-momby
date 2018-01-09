@@ -1,12 +1,9 @@
+/* Index */
 #splash {
 	height: 100vh;
 }
 
-.brand-logo {
-	width: 50%;
-}
-
-.vh100 {
+#content {
 	height: 100vh;
 }
 
@@ -21,10 +18,31 @@
 	border-bottom: 1px dashed red;
 }
 
+/* Home */
+.logo-nav {
+	width: 1.5em;
+}
+/* 
+.brand-logo {
+	width: 50%;
+} */
+
+
+/*Post*/
+
 .images-icons {
 	margin: 1rem 0;
 }
 
+.vh100 {
+	height: 100vh;
+}
+
+
+
+
+
 /* Desktop */
 @media (min-width: 992px) {
+
 }

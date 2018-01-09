@@ -15,7 +15,7 @@
 	<title>Momby</title>
 </head>
 
-<body>
+<body class="">
 	<!--Header-->
 	<header>
 		<nav>
@@ -23,94 +23,245 @@
 				<a href="#!" class="brand-logo">
 					<img src="../assets/images/logo-completo.png" alt="#" class="responsive-img logo-nav">
 				</a>
-				<a href="#" data-activates="mobile-demo" class="button-collapse">
+
+				<!--Side bar-->
+				<ul id="slide-out" class="side-nav">
+					<li>
+						<div class="user-view">
+							<div class="background">
+								<img src="images/office.jpg">
+							</div>
+							<a href="#!user">
+								<img class="circle" src="images/yuna.jpg">
+							</a>
+							<a href="#!name">
+								<span class="white-text name">John Doe</span>
+							</a>
+							<a href="#!email">
+								<span class="white-text email">jdandturk@gmail.com</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<a href="#!">Perfil</a>
+					</li>
+					<li>
+						<div class="divider"></div>
+					</li>
+					<li>
+						<a class="subheader">Intereses</a>
+					</li>
+					<li>
+						<a class="waves-effect" href="#!">Embarazo</a>
+					</li>
+					<li>
+						<a class="waves-effect" href="#!">Niños de 1 a 3 años</a>
+					</li>
+				</ul>
+				<a href="#" data-activates="slide-out" class="button-collapse">
 					<i class="material-icons">menu</i>
 				</a>
-				<ul class="right hide-on-med-and-down">
+				<!--Fin side bar-->
 
-				</ul>
-				<ul class="side-nav" id="mobile-demo">
+				<ul class="right hide-on-med-and-down"></ul>
 
-				</ul>
+				<ul class="side-nav" id="mobile-demo"></ul>
+
 			</nav>
 		</nav>
 	</header>
 	<!--Fin Header-->
 
-	<!--Search-->
-	<section>
+	<!--Tabs-->
+	<section class="">
+		<div class="">
+			<div class="col s12 m12">
+				<!--Pestañas-->
+				<ul class="tabs">
 
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="material-icons prefix">search</i>
-				<input placeholder="Buscar..." type="text" class="active validate" required />
-				<label for="name"></label>
-			</div>
-		</div>
-
-		<div class="row ">
-
-			<div class="col s4 left-align">
-				<button class="btn-large flow-text">+Popular</button>
-			</div>
-
-			<div class="col s4 center-align">
-				<button class="btn-large"> +Último</button>
-			</div>
-
-			<div class="col s4 right-align">
-				<button class="btn-large">+Comment</button>
-			</div>
-	</section>
-	<!--Fin Search-->
-
-	<!--Post-->
-	<section class="row">
-		<div class="card">
-
-			<div class="card-content">
-				<input type="text" name="post" id="input-post">
-				<button class="btn-floating waves-effect waves-light right-align" type="submit" name="action">
-					<i class="material-icons right">send</i>
-				</button>
-			</div>
-
-			<div class="row">
-				<ul>
-					<li>
-						<a class="btn-floating red">
-							<i class="material-icons">insert_chart</i>
+					<li class="tab col s3 m4">
+						<a class="active" href="#newsfeed">
+							<i class="material-icons">fiber_new</i>
 						</a>
 					</li>
-					<li>
-						<a class="btn-floating yellow darken-1">
-							<i class="material-icons">format_quote</i>
+
+					<li class="tab col s3 m4">
+						<a href="#friends">
+							<i class="material-icons">account_circle</i>
 						</a>
 					</li>
-					<li>
-						<a class="btn-floating green">
-							<i class="material-icons">publish</i>
+
+					<li class="tab col s3 m4">
+						<a href="#search">
+							<i class="material-icons">search</i>
 						</a>
 					</li>
-					<li>
-						<a class="btn-floating blue">
-							<i class="material-icons">attach_file</i>
-						</a>
-					</li>
+
 				</ul>
+				<!--Fin Pestañas-->
 			</div>
 
-		</div>
+			<div id="newsfeed" class="col s12 ">
+				<!--Postear -->
+				<div class="row">
+					<div class="col s12 m12">
+						<!--Área de posteo-->
+						<div class="card">
 
+							<!--Foto del usuario-->
+							<div class="col s2 m2">
+								<img class="circle responsive-img valign-wrapper" src="../assets/images/user.jpg" alt="foto del usuario">
+							</div>
+							<!--Fin Foto del usuario-->
+
+							<!--Escribir posts-->
+
+							<div class="row">
+								<form class="col s8 m8">
+									<div class="input-field col s12 m12 black-text">
+										<textarea id="postear" class="materialize-textarea" placeholder="¿Qué haces?"></textarea>
+										<label for="postear">Molly Greace</label>
+								</form>
+								</div>
+								<!--Fin Escribir posts-->
+
+								<!--Botones POSTEAR - ADD PHOTO -->
+								<div class="card-action col s2 m2">
+									<button class="btn-floating waves-effect waves-light send-post" type="submit" name="action">
+										<i class="material-icons right">send</i>
+									</button>
+									<button class="btn-floating waves-effect waves-light add-photo" type="submit" name="action">
+										<i class="material-icons right">add_a_photo</i>
+									</button>
+								</div>
+								<!--Fin botones-->
+
+							</div>
+							<!--Fin Área de posteo-->
+						</div>
+
+						<hr>
+
+						<div class="col s12 m12">
+							<div class="row">
+								<!---->
+								<div class="card">
+									<!--Agrega posts
+									<div class="row">
+									<div class="col s12 m12">
+										<div class="card">
+											*Datos del usuario del post*
+											<div class="col s2 m2">
+												<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
+											</div>
+											<div class="col s8 m8"><label for="user-post"><h5>Nutrición y Salud</h5></label></div>
+	
+											*Imagen del post*
+											<div class="card-image">
+												<img src="../assets/images/posts/frutas.jpg">											
+											</div>
+											*Texto del post*
+											<div class="card-content">
+												<p>Feliz Año 2018!!</p>
+											</div>
+											*Botones de interacción*
+											<div class="card-action center">
+												<a href="#"><i class="material-icons">favorite_border</i></a>
+												<a href="#"><i class="material-icons">comment</i></a>
+												<a href="#"><i class="material-icons">share</i></a>											
+											</div>
+										</div>
+									</div>
+								</div-->
+
+								</div>
+								<!--Fin -->
+							</div>
+						</div>
+
+						<div class="col s12 m12">
+							<div class="row">
+								<!--Newsfeed-->
+								<div class="row">
+									<div class="col s12 m12">
+										<div class="card">
+											<!--Datos del usuario del post-->
+											<div class="col s2 m2">
+												<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
+											</div>
+											<div class="col s8 m8">
+												<label for="user-post">
+													<h5>Nutrición y Salud</h5>
+												</label>
+											</div>
+
+											<!--Imagen del post-->
+											<div class="card-image">
+												<img src="../assets/images/posts/frutas.jpg">
+											</div>
+											<!--Texto del post-->
+											<div class="card-content">
+												<p>Feliz Año 2018!!</p>
+											</div>
+											<!--Botones de interacción-->
+											<div class="card-action center">
+												<a href="#">
+													<i class="material-icons">favorite_border</i>
+												</a>
+												<a href="#">
+													<i class="material-icons">comment</i>
+												</a>
+												<a href="#">
+													<i class="material-icons">share</i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--Fin Newsfeed-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--AGREGAR AMIGOS-->
+			<section id="friends" class="col s12">
+				<!--Buscador de Amigos y/o Marcas-->
+				<div class="row">
+					<div class="input-field col s12 m12">
+						<i class="material-icons prefix">search</i>
+						<input placeholder="Buscar: amigos, marcas..." type="text" class="active validate" required />
+						<label for="name"></label>
+					</div>
+				</div>
+				<!--Pestañas AMIGOS|MARCAS-->
+				<div class="row">
+					<div class="col s12">
+						<ul class="tabs">
+							<li class="tab col s3">
+								<a href="#peopple">personas</a>
+							</li>
+							<li class="tab col s3">
+								<a class="active" href="#patent">marcas</a>
+							</li>
+						</ul>
+					</div>
+					<div id="peopple" class="col s12">info de personas</div>
+					<div id="patent" class="col s12">info de marcas</div>
+				</div>
+				<!--Visualizar según pestañas: Amigos-->
+				<div class="row"></div>
+				<!--Visualizar según pestañas: Marcas-->
+				<div class="row"></div>
+			</section>
+
+			<!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
+			<div id="search" class="col s12">Hola test 3</div>
 		</div>
 	</section>
-	<!--Fin Post-->
+	<!--Fin Tabs-->
 
-	<!---->
-	<!---->
-
-	<!---->
-	<!---->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Enlace a Materialize compilado y minificado-->
 	<script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
