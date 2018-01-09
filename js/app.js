@@ -84,7 +84,6 @@ $(document).ready(function() {
   console.log(localStorage.email);
   console.log(localStorage.password);
 
- 
   $email2.on('input', function() {
     if ($(this).val() === localStorage.email) {
       alert('pasa');
@@ -98,7 +97,6 @@ $(document).ready(function() {
       validatePassword2 = true;
     }
   });
-
 
   $buttonLogIn.on('click', function(event) {
     event.preventDefault();

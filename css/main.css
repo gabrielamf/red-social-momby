@@ -6,7 +6,7 @@
 	width: 50%;
 }
 
-#content {
+.vh100 {
 	height: 100vh;
 }
 
@@ -19,6 +19,10 @@
 	margin-top: 0;
 	padding-bottom: 1rem;
 	border-bottom: 1px dashed red;
+}
+
+.images-icons {
+	margin: 1rem 0;
 }
 
 /* Desktop */
