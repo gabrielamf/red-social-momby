@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Icon tab-->
+  <!-- <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-ico"/> -->
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Enlace a Materialize compilado y minificado-->
+	<link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
+	<!-- Enlace a hoja de extilos externa -->
+	<link rel="stylesheet" href="css/main.css">
+	<title>Momby</title>
+</head>
+<body>
+	<section id="splash" class="cyan lighten-5 valign-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<div class="col s6 offset-s3">
+						<img class="responsive-img" src="assets/images/logo-completo.png" alt="logo">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="content" class="cyan lighten-5">
+		<nav class="fixed-top white">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo red-text center">momby</a>
+			</div>
+		</nav>
+    <div class="container">
+			<div class="row">
+				<div class="col s10 offset-s1">
+					<img class="responsive-img mom" src="assets/images/mom.png" alt="mamá">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s10 offset-s1">
+					<p class="center slogan red-text">¿Quién mejor que otra madre para entenderte y aconsejarte?</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<form class="center">
+						<a class="waves-effect waves-light btn modal-trigger" href="#modal-SignUp">Regístrate</a>
+						<a class="waves-effect waves-light btn modal-trigger" href="#modal-LogIn">Inicia Sesión</a>
+					</form>
+				</div>
+			</div>
+		</div>
+  <!-- Modal REGISTRATE -->
+  <div id="modal-SignUp" class="modal">
+    <div class="modal-content">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field">
+						<i class="material-icons prefix">account_circle</i>
+						<input id="email" type="email" class="validate">
+						<label for="email">Email</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field">
+						<i class="material-icons prefix">account_circle</i>
+						<input id="password" type="password" class="validate">
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<p class="center">
+					<input type="checkbox" id="indeterminate-checkbox" />
+					<label for="indeterminate-checkbox">Check me out</label>
+				</p>
+				<div class="row">
+					<div class="center">
+						<a id="sign-up"class="waves-effect waves-light btn disabled">Sign up</a>
+					</div>
+				</div>
+			</form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+    </div>
+	</div>
+	<!-- Modal INICIA SESIÓN -->
+	<div id="modal-LogIn" class="modal">
+		<div class="modal-content">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field">
+						<i class="material-icons prefix">account_circle</i>
+						<input id="email2" type="email" class="validate">
+						<label for="email2">Email</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field">
+						<i class="material-icons prefix">account_circle</i>
+						<input id="password2" type="password" class="validate">
+						<label for="password2">Password</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="center">
+						<a id="log-in"class="waves-effect waves-light btn">Log in</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+		</div>
+	</div>
+  </section>
+  <!-- Enlace a jQuery compilado y minificado-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Enlace a Materialize compilado y minificado-->
+	<script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
+	<!-- link a la data -->
+	<script src="js/data.js"></script>
+	<!-- Enlace a archivo JavaScript externo -->
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

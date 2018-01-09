@@ -1,0 +1,26 @@
+#splash {
+	height: 100vh;
+}
+
+.brand-logo {
+	width: 50%;
+}
+
+#content {
+	height: 100vh;
+}
+
+.mom {
+	margin-top: 3em;
+}
+
+.slogan {
+	font-size: 1.3rem;
+	margin-top: 0;
+	padding-bottom: 1rem;
+	border-bottom: 1px dashed red;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+}
