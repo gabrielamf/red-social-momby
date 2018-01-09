@@ -20,12 +20,13 @@
 
 /* Home */
 .logo-nav {
-	width: 1.5em;
+	width: 3em;
 }
-/* 
-.brand-logo {
-	width: 50%;
-} */
+
+.color-menu {
+	color: #ef9a9a !important;
+	font-weight: 700;
+}
 
 
 /*Post*/
