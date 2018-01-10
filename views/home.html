@@ -67,6 +67,7 @@
 		</nav>
 	</header>
 	<!--Fin Header-->
+
 	<!--Tabs-->
 	<section>
 		<div class="">
@@ -96,107 +97,139 @@
 			<!--Fin Pestañas-->
 		</div>
 	</section>
+	<!--Fin Tabs-->
+
 	<!--Newsfeed-->
-	<section>
-		<div id="newsfeed" class="col s12 ">
-			<!--Postear -->
+	<section id="newsfeed" class="col s12">
+		<div class="section">
+			<!--Área de posteo-->
 			<div class="row">
-
-				<!--Área de posteo-->
-				<div class="col s12 m12">
-					<div class="card">
-						<div class="row">
-							<!--Foto del usuario-->
-							<div class="col s2 m2 ">
-								<img class="circle responsive-img valign-wrapper" src="../assets/images/user-data/user.jpg" alt="foto del usuario">
-							</div>
-							<!--Escribir posts-->
-							<div class="col s8 m8">
-								<div class="input-field col s12 m12 black-text">
-									<textarea id="area-post" class="materialize-textarea" placeholder="¿Qué haces?"></textarea>
-								<label for="area-post">Hanna Dick</label>
-								</div>
-							</div>
-							<!--Botones POSTEAR - ADD PHOTO -->
-							<div class="card-action col s2 m2">
-								<button class="btn-floating waves-effect waves-light send-post" type="submit" name="action" id="btn-post">
-									<i class="material-icons right">send</i>
-								</button>
-								<button class="btn-floating waves-effect waves-light add-photo" type="submit" name="action">
-									<i class="material-icons right">add_a_photo</i>
-								</button>
-							</div>
-							<!--Fin botones-->
+				<div class="card-content col s12 m12">
+					<!--Foto del usuario-->
+					<div class="col s2 m2 ">
+						<img class="circle responsive-img valign-wrapper" src="../assets/images/user-data/user.jpg" alt="foto del usuario">
+					</div>
+					<div class="col s10 m10">
+						<h5 class="black-text">HannaDick</h5>
+					</div>
+					<!--Escribir posts-->
+					<div class="col s8 m8">
+						<div class="input-field col s12 m12 black-text">
+							<textarea id="text-post" class="materialize-textarea" placeholder="¿Qué haces?"></textarea>
+							<!-- <label for="area-post"></label> -->
 						</div>
 					</div>
-				</div>
-				<!--Fin Área de posteo-->
-
-				<!--Separador de secciones--><hr>
-
-				<!--Agregar post-->
-				<div class="col s12 m12">
-					<div class="card">
+					<!--Botones POSTEAR - ADD PHOTO -->
+					<div class="card-action col s2 m2">
+						<button class="btn-floating waves-effect waves-light teal accent-4 send-post" type="submit" name="action" id="btn-post">
+							<i class="material-icons right">send</i>
+						</button>
+						<button class="btn-floating waves-effect waves-light teal accent-4 add-photo" type="submit" name="action">
+							<i class="material-icons right">add_a_photo</i>
+						</button>
 					</div>
 				</div>
-				<!--Fin Agregar post-->
-				<!--Noticias de la red-->				
-				<div class="col s12 m12">
-					<div class="row">
-						<!--Newsfeed-->
-						<div class="row">
-								<div class="col s12 m12">
-									<div class="card">
-										<!--Datos del usuario del post-->
-										<div class="col s2 m2">
-											<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
-										</div>
-										<div class="col s8 m8">
-											<label for="user-post">
-												<h5>Nutrición y Salud</h5>
-											</label>
-										</div>
-										<!--Imagen del post-->
-										<div class="card-image">
-											<img src="../assets/images/posts/frutas.jpg">
-										</div>
-										<!--Texto del post-->
-										<div class="card-content">
-											<p>Feliz Año 2018!!</p>
-										</div>
-										<!--Botones de interacción-->
-										<div class="card-action center">
-											<a href="#">
-												<i class="material-icons">favorite_border</i>
-											</a>
-											<a href="#">
-												<i class="material-icons">comment</i>
-											</a>
-											<a href="#">
-												<i class="material-icons">share</i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Fin Newsfeed-->
-						</div>
-					</div>
-				</div>
-				<!--Fin noticias de la red-->
-				
 			</div>
+			<!--Fin Área de posteo-->
+		</div>
+
+		<div class="divider"></div>
+		<div class="section" id="container-post">
+			<div class="row">
+				
+      </div>
+      
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="card">
+						<div class="col s12 m12">
+							<div class="col s2 m2">
+								<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
+							</div>
+							<div class="col s8 m8">
+								<label for="user-post" class="black-text">
+									<h5>Nutrición y Salud</h5>
+								</label>
+							</div>
+						</div>
+						<!--Imagen del post-->
+						<div class="card-image">
+							<img src="../assets/images/posts/frutas.jpg">
+						</div>
+						<!--Texto del post-->
+						<div class="card-content">
+							<p>Consume frutas!!</p>
+							<a target="_blank" href="https://espanol.babycenter.com/a13500046/las-frutas-y-verduras-en-tu-alimentaci%C3%B3n-durante-el-embarazo"></a>
+						</div>
+						<!--Botones de interacción-->
+						<div class="card-action right-align">
+							<a href="#">
+								<i class="material-icons red-text lighten-3-text">favorite_border</i>
+							</a>
+							<a href="#">
+								<i class="material-icons red-text lighten-3-text">comment</i>
+							</a>
+							<a href="#">
+								<i class="material-icons red-text lighten-3-text">share</i>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="card">
+						<div class="col s12 m12">
+							<div class="col s2 m2">
+								<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
+							</div>
+							<div class="col s8 m8">
+								<label for="user-post" class="black-text">
+									<h5>Nutrición y Salud</h5>
+								</label>
+							</div>
+						</div>
+						<!--Imagen del post-->
+						<div class="card-image">
+							<img src="../assets/images/posts/frutas.jpg">
+						</div>
+						<!--Texto del post-->
+						<div class="card-content">
+							<p>Consume frutas!!</p>
+							<a target="_blank" href="https://espanol.babycenter.com/a13500046/las-frutas-y-verduras-en-tu-alimentaci%C3%B3n-durante-el-embarazo"></a>
+						</div>
+						<!--Botones de interacción-->
+						<div class="card-action right-align">
+							<a href="#">
+								<i class="material-icons red-text lighten-3-text">favorite_border</i>
+							</a>
+							<a href="#">
+								<i class="material-icons red-text lighten-3-text">comment</i>
+							</a>
+							<a href="#">
+								<i class="material-icons red-text lighten-3-text">share</i>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</section>
 	<!--Fin Newsfeed-->
+
 	<!--AGREGAR AMIGOS-->
 	<section id="friends" class="col s12">
 		<!--Buscador de Amigos y/o Marcas-->
 		<div class="row">
-				<div class="input-field col s12 m12">
-					<i class="material-icons prefix">search</i>
-					<input placeholder="Buscar: amigos, marcas..." type="text" class="active validate" required />
-					<label for="name"></label>
-				</div>
+			<div class="input-field col s12 m12">
+				<i class="material-icons prefix">search</i>
+				<input placeholder="Buscar: amigos, marcas..." type="text" class="active validate" required />
+				<label for="name"></label>
+			</div>
 		</div>
 		<!--Pestañas AMIGOS|MARCAS-->
 		<div class="row">
@@ -216,67 +249,70 @@
 			<div class="row"></div>
 	</section>
 	<!--Fin agregar amigos-->
+
 	<!--Búsqueda y Blogs-->
-	<section  id="search" class="col s12">
+	<section id="search" class="col s12">
 		<!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
-		
+
 		<div class="row input-search">
-		  <div class="input-field col s12">
+			<div class="input-field col s12">
 				<input placeholder="Placeholder" id="search" type="text" class="validate">
 				<label for="first_name">Filtra entre lo más POPULAR, COMENTADO y MÁS VISTO</label>
-				</div>
 			</div>
-			
+		</div>
+
 		<div class="row" id="container-posts">
 		</div>
 	</section>
-		  <!-- Modal poste -->
-			<div id="modal-post" class="modal">
-					<div class="modal-content">
-							<div class="row">
-									<div class="col s12 m12">
-										<div class="card">
-											<!--Datos del usuario del post-->
-											<div class="col s2 m2">
-												<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
-											</div>
-											<div class="col s8 m8">
-												<label for="user-post">
-													<h5>Nutrición y Salud</h5>
-												</label>
-											</div>
-											<!--Imagen del post-->
-											<div class="card-image">
-												<img src="../assets/images/posts/1.jpg">
-											</div>
-											<!--Texto del post-->
-											<div class="card-content">
-												<p>Feliz Año 2018!!</p>
-											</div>
-											<!--Botones de interacción-->
-											<div class="card-action center">
-												<a href="#">
-													<i class="material-icons">favorite_border</i>
-												</a>
-												<a href="#">
-													<i class="material-icons">comment</i>
-												</a>
-												<a href="#">
-													<i class="material-icons">share</i>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-					</div>
-					<div class="modal-footer">
-						<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+	<!-- Modal poste -->
+	<div id="modal-post" class="modal">
+		<div class="modal-content">
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="card">
+						<!--Datos del usuario del post-->
+						<div class="col s2 m2">
+							<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
+						</div>
+						<div class="col s8 m8">
+							<label for="user-post">
+								<h5>Nutrición y Salud</h5>
+							</label>
+						</div>
+						<!--Imagen del post-->
+						<div class="card-image">
+							<img src="../assets/images/posts/1.jpg">
+						</div>
+						<!--Texto del post-->
+						<div class="card-content">
+							<p>Feliz Año 2018!!</p>
+						</div>
+						<!--Botones de interacción-->
+						<div class="card-action center">
+							<a href="#">
+								<i class="material-icons">favorite_border</i>
+							</a>
+							<a href="#">
+								<i class="material-icons">comment</i>
+							</a>
+							<a href="#">
+								<i class="material-icons">share</i>
+							</a>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div>
+	</div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Enlace a Materialize compilado y minificado-->
 	<script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+	<!-- Librería moment.js -->
+	<script type="text/javascript" src="../vendors/moment/moment.js"></script>
 	<!-- Enlace a archivo JavaScript externo -->
 	<script type="text/javascript" src="../js/data.js"></script>
 	<!-- Enlace a archivo JavaScript externo -->
