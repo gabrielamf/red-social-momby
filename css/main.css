@@ -23,6 +23,11 @@
 	width: 3em;
 }
 
+/* Contacto */
+.contacto {
+	font-size: 1.3rem;
+}
+
 .color-menu {
 	color: #ef9a9a !important;
 	font-weight: 700;
@@ -36,6 +41,10 @@
 
 .vh100 {
 	height: 100vh;
+}
+
+.def-color {
+	color: #ef9a9a;
 }
 
 /* FILTRADO POSTS */
@@ -57,7 +66,7 @@
 }
 
 .name-color {
-	color: #00bfa5;
+	color: #00bfa5 !important;
 }
 
 #margen {
@@ -75,6 +84,7 @@
 .favorite {
 	color: red;
 }
+
 /* Desktop */
 @media (min-width: 992px) {
 

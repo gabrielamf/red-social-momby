@@ -9,7 +9,7 @@ $(document).ready(function() {
   setTimeout(function() {
     $('#splash').delay().fadeOut(1000);
     $('#content').toggle();
-  }, 100);
+  }, 3000);
 	
   // VALIDACIÓN REGISTRATE
   var $email = $('#email');
@@ -43,7 +43,7 @@ $(document).ready(function() {
       desactiveButton();
     }
   });
-  // !$('#email').hasClass('invalid') && ($('#email').val().trim().length !== 0
+
   $password.on('input', function() {
     console.log($(this).val());
     if ($(this).val()) {
@@ -56,7 +56,6 @@ $(document).ready(function() {
  
   $checked.on('click', function(event) {
     if (event.target.checked) {
-    //   alert('entre');
       validateChecked = true;
       activeButton();
     } else {
@@ -68,7 +67,8 @@ $(document).ready(function() {
     event.preventDefault();
     localStorage.email = $email.val();
     localStorage.password = $password.val();
-    window.location.href = '../views/home.html';
+    alert('Felicitaciones, te haz registrado con éxito. Puedes iniciar sesión');
+    // window.location.href = 'views/home.html';
   });
 	
   // VALIDACIÓN INICIA SESIÓN
@@ -101,7 +101,7 @@ $(document).ready(function() {
   $buttonLogIn.on('click', function(event) {
     event.preventDefault();
     if (validateEmail2 && validatePassword2) {
-      window.location.href = '../views/home.html';
+      window.location.href = 'views/home.html';
     } else {
       alert('Por favor, nesecitas registrarte');
     }

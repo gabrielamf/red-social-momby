@@ -127,20 +127,15 @@ $(document).ready(function() {
   '<div class="col s6 m4 l3 collection card-image card-border hoverable" data-type=' + data[i].type + ' >' + 
     '<div class="card">' +
       '<div class="card-image">' +
-      '<img id="post-height" class="responsive-img modal-trigger content" data-name =' + data[i].name + ' data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
+      '<img id="post-height" class="responsive-img modal-trigger content" data-name ="' + data[i].name + '" data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
     '</div>' +
-    '<div class="card-content">' +
-    '<p>' + data[i].name + '</p>' +
+    '<div class="card-content espaciado">' +
+    '<p class="name-color">' + data[i].name + '</p>' +
     '</div>' +
   '</div>';
     container.append(grupo);
   }
- 
-  $('.heart').click(function(event) {
-    console.log(event.target);
-    $(this).toggleClass('favorite');
-  });
-     
+
   // FILTRO DE POSTS
   $('#search-post').keyup(function() {
     var name = $(this).val().toLowerCase();
@@ -158,6 +153,42 @@ $(document).ready(function() {
         $(this).show();
       }
     });
+  });
+
+  // funcion para  contactos
+  var contactos = $('#container-contactos');
+  for (j = 0; j < data.length; j++) {
+    var addContacs = 
+  '<div class="col s12 m6 l4 collection2 hoverable">' + 
+    '<div class="card horizontal">' +
+      '<div class="card-image">' +
+        '<img src=' + data[j].user + '>' +
+      '</div>' +
+      '<div class="card-stacked">' +
+        '<div class="card-content contacto">' +
+          '<p class="name-color">' + data[j].contact + '</p>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+    contactos.append(addContacs);
+  }
+
+  // FILTRO DE CONTACTOS
+  $('#input-contact').keyup(function() {
+    var name = $(this).val();
+    $('.collection2').hide();
+    $('.collection2').each(function() {
+      var search = $(this).text().toLowerCase();
+      if (search.indexOf(name) !== -1) { // filtrado por nombre de contacto
+        $(this).show();
+      }
+    });
+  });
+ 
+  $('.heart').click(function(event) {
+    event.preventDefault();
+    $(this).toggleClass('favorite');
   });
  
   // MODAL
