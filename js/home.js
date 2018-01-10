@@ -1,24 +1,62 @@
 $(document).ready(function() {
+  // Muestra menú lateral en side nav
   $('.button-collapse').sideNav();
 
-  var containerPost = $('.card');
-  var area = $('#area-post');
+  // Selecciona elementos
+  var area = $('#text-post');
   var publish = $('#btn-post');
+  var containerPost = $('#container-post');
+  
+  // Añade evento para crear posts
+  $(publish).on('click', function(event) {
+    // Creamos elementos    
+    var comment = $(area).val();
+    var infoUser = 
+      '<div class="row">' + 
+        '<div class="col s2 m2">' + 
+          '<img class="circle responsive-img" src="../assets/images/user-data/user.jpg" alt="foto del usuario">' +
+        '</div>' +
+        '<div class="col s10 m10">' + 
+          '<label class="black-text">' +
+            '<h5>Hanna Dick</h5>' + infoHour +
+          '</label>' +
+        '</div>' + 
+      '</div>';
+    var hora = moment().format('LLL');
+    var infoHour = '<p>' + hora + '</p>';
+    var textPost = 
+      '<div class="card-content">' +
+        '<p class="col s12 m12">' + comment + '</p>' +
+      '</div>';
+    var buttons =
+      '<div class="card-action right-align">' +
+        '<a href="#">' +
+          '<i class="material-icons red-text lighten-3-text">favorite_border</i>' +
+        '</a>' +
+        '<a href="#">' +
+          '<i class="material-icons red-text lighten-3-text">comment</i>' +
+        '</a>' +
+        '<a href="#">' +
+          '<i class="material-icons red-text lighten-3-text">share</i>' +
+        '</a>' +
+      '</div>';
+    
+    if ($(area).val()) {
+      var containerNewPost = '<div class="row"><div class="col s12 m12"><div class="card">' + infoUser + textPost + buttons + '</div></div></div>';
+      
+      $(containerPost).prepend(containerNewPost);
 
-  $(publish).on('click', function() {
-    if (area.val()) {
-      var textPost = $('<p/>', {
-        'class': 'text-post'
-      });
-      $(containerPost).append(textPost);
-      textPost.html();
-    }
+      $(area).val('');
+      $(area).focus();
+    } 
+    // else {
+    //   $(this).attr('disabled', 'true');
+    // }
   });
 
-  // button write
-  var elem = $('.fixed-action-btn');
+  // genera modal
   $('.modal').modal();
-  
+
   // funcion para filtrado
   var container = $('#container-posts');
   for (i = 0; i < data.length; i++) {
@@ -34,12 +72,12 @@ $(document).ready(function() {
   '</div>';
     container.append(grupo);
   }
-
+ 
   $('.heart').click(function(event) {
     console.log(event.target);
     $(this).toggleClass('favorite');
   });
-    
+     
   // FILTRO DE POSTS
   $('#search-post').keyup(function() {
     var name = $(this).val().toLowerCase();
@@ -58,14 +96,14 @@ $(document).ready(function() {
       }
     });
   });
-
+ 
   // MODAL
   $('.content').click(function() {
     var name = $(this).data('name'),
       image = $(this).data('image'),
       description = $(this).data('description'),
       user = $(this).data('user');
-      
+       
     $('.name').text(name);
     $('.image').attr('src', image);
     $('.description').text(description);
