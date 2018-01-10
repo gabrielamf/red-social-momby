@@ -44,7 +44,38 @@
 	margin-top: 1rem;
 }
 
+#search-post {
+	margin-bottom: 0;
+}
 
+.card-border {
+	border: none;
+}
+
+/* Modal post */
+.icon-close {
+	margin: 0;
+}
+
+.name-color {
+	color: #00bfa5;
+}
+
+#margen {
+	padding: 5px;
+}
+
+#post-height {
+	height: 7rem;
+}
+
+.margin-user {
+	margin-top: 8px !important;
+}
+
+.favorite {
+	color: red;
+}
 /* Desktop */
 @media (min-width: 992px) {
 
