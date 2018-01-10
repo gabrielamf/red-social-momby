@@ -45,16 +45,21 @@
             <a href="#!">Perfil</a>
           </li>
           <li>
+            <a class="waves-effect" href="#!">
+              <i class="material-icons">rss_feed</i>Intereses</a>
+          </li>
+          <li>
+            <a class="waves-effect" href="#!">
+              <i class="material-icons">favorite</i>Mis Favoritos</a>
+          </li>
+          <li>
             <div class="divider"></div>
           </li>
           <li>
-            <a class="subheader">Intereses</a>
+            <a class="waves-effect" href="#!">Configuración</a>
           </li>
           <li>
-            <a class="waves-effect" href="#!">Embarazo</a>
-          </li>
-          <li>
-            <a class="waves-effect" href="#!">Niños de 1 a 3 años</a>
+            <a class="waves-effect" href="#!">Salir</a>
           </li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse">
@@ -69,25 +74,25 @@
   <!--Fin Header-->
 
   <!--Tabs-->
-  <section>
-    <div class="">
+  <section class="section">
+    <div class="row">
       <!--Pestañas-->
-      <div class="col s12 m12">
+      <div class="col s12 m12 l12">
         <ul class="tabs">
           <!--Noticias-->
-          <li class="tab col s3 m4">
+          <li class="tab col s3 m4 l4">
             <a class="active" href="#newsfeed">
               <i class="material-icons">fiber_new</i>
             </a>
           </li>
           <!--Amigos-->
-          <li class="tab col s3 m4">
+          <li class="tab col s3 m4 l4">
             <a href="#friends">
               <i class="material-icons">person_add</i>
             </a>
           </li>
           <!--Búsqueda-->
-          <li class="tab col s3 m4">
+          <li class="tab col s3 m4 l4">
             <a href="#search">
               <i class="material-icons">search</i>
             </a>
@@ -100,7 +105,7 @@
   <!--Fin Tabs-->
 
   <!--Newsfeed-->
-  <section id="newsfeed" class="col s12">
+  <section id="newsfeed" class="section container">
     <div class="section">
       <!--Área de posteo-->
       <div class="row">
@@ -164,7 +169,9 @@
             </div>
             <!--Texto del post-->
             <div class="card-content">
-              <p>Pablo Pineda: Yo les diría que reacciones como el miedo o la incertidumbre ante el futuro son normales pero hay que darles la vuelta y pensar que es un reto para ellos y que por tanto hay que intentarlo y no pensar tanto en el futuro.</p>
+              <p>Pablo Pineda: Yo les diría que reacciones como el miedo o la incertidumbre ante el futuro son normales pero
+                hay que darles la vuelta y pensar que es un reto para ellos y que por tanto hay que intentarlo y no pensar
+                tanto en el futuro.</p>
               <a target="_blank" href="https://espanol.babycenter.com/a13500046/las-frutas-y-verduras-en-tu-alimentaci%C3%B3n-durante-el-embarazo"></a>
             </div>
             <!--Botones de interacción-->
@@ -178,40 +185,40 @@
               <a href="#">
                 <i class="material-icons def-color">share</i>
               </a>
-            </div>				
-			</div>
-	</section>
+            </div>
+          </div>
+  </section>
   <!--Fin Newsfeed-->
-  
-	<!--AGREGAR AMIGOS-->
-	<section id="friends" class="col s12">
-		<!--Buscador de Amigos y/o Marcas-->
-		<div class="row">
-				<div class="input-field col s12 m12">
-					<i class="material-icons prefix">search</i>
-					<input id="input-contact" placeholder="Buscar amigos..." type="text" class="active validate" required />
-					<label for="name"></label>
-				</div>
+
+  <!--AGREGAR AMIGOS-->
+  <section id="friends" class="container">
+    <!--Buscador de Amigos y/o Marcas-->
+    <div class="row">
+      <div class="input-field col s12 m12">
+        <i class="material-icons prefix">search</i>
+        <input id="input-contact" placeholder="Buscar amigos..." type="text" class="active validate" required />
+        <label for="name"></label>
+      </div>
     </div>
     <div id="container-contactos" class="row">
     </div>
-	</section>
+  </section>
   <!--Fin agregar amigos-->
-  
-	<!--Búsqueda y Blogs-->
-	<section  id="search" class="col s12">
-		<!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
-		
-		<div class="row input-search">
-		  <div class="input-field col s12">
-				<input placeholder="Placeholder" id="search-post" type="text" class="validate">
-				<label for="first_name">Filtra entre lo más POPULAR, COMENTADO y MÁS VISTO</label>
-				</div>
-			</div>
-		<div class="row" id="container-posts">
+
+  <!--Búsqueda y Blogs-->
+  <section id="search" class="container">
+    <!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
+
+    <div class="row input-search">
+      <div class="input-field col s12">
+        <input placeholder="Placeholder" id="search-post" type="text" class="validate">
+        <label for="first_name">Filtra entre lo más POPULAR, COMENTADO y MÁS VISTO</label>
+      </div>
+    </div>
+    <div class="row" id="container-posts">
     </div>
 
-	</section>
+  </section>
   <!-- Modal poste -->
   <div id="modal-post" class="modal">
     <div id="margen" class="modal-content">

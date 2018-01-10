@@ -20,7 +20,7 @@
 
 /* Home */
 .logo-nav {
-	width: 3em;
+	width: 6em;
 }
 
 /* Contacto */
@@ -87,5 +87,8 @@
 
 /* Desktop */
 @media (min-width: 992px) {
-
+	a .logo-nav {		
+		width: 5em;
+    transform: translateX(400%);				
+	}
 }

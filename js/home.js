@@ -99,22 +99,6 @@ $(document).ready(function() {
       $(containerPost).prepend(postImg);
     });
   });
-  //     var photo = new FileReader();console.log(photo);
-
-  //     // $('inputPhoto[type=file]').change(function() {
-  //     //   var file = (this.files[0].toString);
-  //     //   // permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona
-  //     //   var reader = new FileReader();
-
-  //     //   $(inputPhoto).text('');
-  //     //   $(inputPhoto).text(file);
-        
-  //       // $(reader).onload(function(e){
-  //       //   $('#preview img').attr({'src', e.target.result});
-  //       // });
-
-  //       //reader.readAsDataURL(this.files[0]);
-  //     });
 
 
   // Genera modal
