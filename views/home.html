@@ -110,26 +110,27 @@
             <img class="circle responsive-img valign-wrapper" src="../assets/images/user-data/user.jpg" alt="foto del usuario">
           </div>
           <div class="col s7 m7">
-            <h5 class="black-text">HannaDick</h5>
+            <h5 class="black-text">Hanna Dick</h5>
           </div>
           <!--Escribir posts-->
           <div class="col s10 m10">
             <div class="input-field black-text">
               <textarea id="text-post" class="materialize-textarea" placeholder="¿Qué haces?"></textarea>
-              <!-- <label for="area-post"></label> -->
+              <label for="text-post"></label>
             </div>
           </div>
           <!--Botones POSTEAR - ADD PHOTO -->
-          <div class="card-action file-field">
-            <button class="btn-floating waves-effect waves-light teal accent-4 send-post" type="submit" name="action" id="btn-post">
+          <div class="card-action col s2 m2 file-field">
+            <button class="btn-floating waves-effect waves-light teal accent-4" type="submit" name="action" id="btn-post">
               <i class="material-icons right">send</i>
             </button>
-            <button class="btn-floating waves-effect waves-light teal accent-4 add-photo" type="submit" name="action" id="send-photo">
+            <button class="btn-floating waves-effect waves-light teal accent-4" type="submit" name="action" id="add-photo">
               <i class="material-icons right">add_a_photo</i>
               <input type="file">
             </button>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
+            <div class="card-title file-path-wrapper hide">
+              <input class="file-path validate" disabled type="text">
+              <!-- <span class="btn send-photo">OK</span> -->
             </div>
           </div>
         </div>
