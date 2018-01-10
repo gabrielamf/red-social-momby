@@ -120,13 +120,17 @@
             </div>
           </div>
           <!--Botones POSTEAR - ADD PHOTO -->
-          <div class="card-action col s2 m2">
+          <div class="card-action file-field">
             <button class="btn-floating waves-effect waves-light teal accent-4 send-post" type="submit" name="action" id="btn-post">
               <i class="material-icons right">send</i>
             </button>
-            <button class="btn-floating waves-effect waves-light teal accent-4 add-photo" type="submit" name="action">
+            <button class="btn-floating waves-effect waves-light teal accent-4 add-photo" type="submit" name="action" id="send-photo">
               <i class="material-icons right">add_a_photo</i>
+              <input type="file">
             </button>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
           </div>
         </div>
       </div>
