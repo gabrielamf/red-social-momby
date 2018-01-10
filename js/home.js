@@ -15,10 +15,10 @@ $(document).ready(function() {
     var infoUser = 
       '<div class="row">' + 
         '<div class="col s2 m2">' + 
-          '<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/user-data/user.jpg" alt="foto del usuario">' +
+          '<img class="circle responsive-img" src="../assets/images/user-data/user.jpg" alt="foto del usuario">' +
         '</div>' +
         '<div class="col s10 m10">' + 
-          '<label for="user-post" class="black-text">' +
+          '<label class="black-text">' +
             '<h5>Hanna Dick</h5>' + infoHour +
           '</label>' +
         '</div>' + 
@@ -109,15 +109,15 @@ $(document).ready(function() {
   var container = $('#container-posts');
   for (i = 0; i < data.length; i++) {
     var grupo = 
-   '<div class="col s6 m4 l3 collection card-image card-border hoverable" data-type=' + data[i].type + ' >' + 
-     '<div class="card">' +
-       '<div class="card-image">' +
-       '<img id="post-height" class="responsive-img modal-trigger content" data-name =' + data[i].name + ' data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
-     '</div>' +
-     '<div class="card-content">' +
-     '<p>' + data[i].name + '</p>' +
-     '</div>' +
-   '</div>';
+  '<div class="col s6 m4 l3 collection card-image card-border hoverable" data-type=' + data[i].type + ' >' + 
+    '<div class="card">' +
+      '<div class="card-image">' +
+      '<img id="post-height" class="responsive-img modal-trigger content" data-name =' + data[i].name + ' data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
+    '</div>' +
+    '<div class="card-content">' +
+    '<p>' + data[i].name + '</p>' +
+    '</div>' +
+  '</div>';
     container.append(grupo);
   }
  

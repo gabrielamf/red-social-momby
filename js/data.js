@@ -9,14 +9,14 @@ var data = [{
   'name': 'Indigo',
   'image': '../assets/images/posts/2.jpg',
   'description': 'pequeña description',
-  'type': 'comentado',
+  'type': 'comentado popular',
   'user': '../assets/images/users-post/user1.jpg',
 },
 {
   'name': 'bebé3',
   'image': '../assets/images/posts/3.jpg',
   'description': 'pequeña description',
-  'type': 'reciente',
+  'type': 'reciente popular',
   'user': '../assets/images/users-post/user1.jpg',
 },
 {
@@ -37,7 +37,7 @@ var data = [{
   'name': 'bebé3',
   'image': '../assets/images/posts/3.jpg',
   'description': 'Jr. Bambues 198, La Molina, Lima 15024, Perú',
-  'type': 'reciente',
+  'type': 'reciente popular',
   'user': '../assets/images/users-post/user1.jpg',
 },
 ];
