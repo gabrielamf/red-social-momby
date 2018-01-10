@@ -50,7 +50,7 @@ Nuestra versión final cumple con:
 
 ![vista1](assets/docs/vista1.jpg)
 ![vista2-newsfeed](assets/docs/vista2-newsfeed.jpg)
-![vista2-contactos](assets/docs/vista2-contactos.jpg)
+![vista2-contactos](assets/docs/vista2.jpg)
 ![vista2-buscador](assets/docs/home-buscador.jpg)
 ![vista2-user](assets/docs/vista2-user.jpg)
 
