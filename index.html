@@ -2,275 +2,129 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Enlace a Materialize compilado y minificado-->
-  <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
-  <!-- Enlace a hoja de extilos externa -->
-  <link rel="stylesheet" href="../css/main.css">
-
-  <title>Momby</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Icon tab-->
+	<!-- <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-ico"/> -->
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Enlace a Materialize compilado y minificado-->
+	<link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
+	<!-- Enlace a hoja de extilos externa -->
+	<link rel="stylesheet" href="css/main.css">
+	<title>Momby</title>
 </head>
 
 <body>
-  <!--Header-->
-  <header>
-    <nav>
-      <nav class="nav-wrapper white">
-        <a href="#!" class="brand-logo center-align s12 m12 l6">
-          <img src="../assets/images/logo-nombre.png" alt="#" class="responsive-img logo-nav">
-        </a>
-        <!--Side bar-->
-        <ul id="slide-out" class="side-nav">
-          <li>
-            <div class="user-view">
-              <div class="background">
-                <img src="../assets/images/user-data/portada.jpg">
-              </div>
-              <a href="#!user">
-                <img class="circle" src="../assets/images/user-data/user.jpg">
-              </a>
-              <a href="#!name">
-                <span class="white-text name">Hanna Dick</span>
-              </a>
-              <a href="#!email">
-                <span class="white-text email">hdick@gmail.com</span>
-              </a>
-            </div>
-          </li>
-          <li>
-            <a href="#!">Perfil</a>
-          </li>
-          <li>
-            <a class="waves-effect" href="#!">
-              <i class="material-icons">rss_feed</i>Intereses</a>
-          </li>
-          <li>
-            <a class="waves-effect" href="#!">
-              <i class="material-icons">favorite</i>Mis Favoritos</a>
-          </li>
-          <li>
-            <div class="divider"></div>
-          </li>
-          <li>
-            <a class="waves-effect" href="#!">Configuración</a>
-          </li>
-          <li>
-            <a class="waves-effect" href="#!">Salir</a>
-          </li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse">
-          <i class="material-icons color-menu">menu</i>
-        </a>
-        <!--Fin side bar-->
-        <ul class="right hide-on-med-and-down"></ul>
-        <ul class="side-nav" id="mobile-demo"></ul>
-      </nav>
-    </nav>
-  </header>
-  <!--Fin Header-->
-
-  <!--Tabs-->
-  <section class="section">
-    <div class="row">
-      <!--Pestañas-->
-      <div class="col s12 m12 l12">
-        <ul class="tabs">
-          <!--Noticias-->
-          <li class="tab col s3 m4 l4">
-            <a class="active" href="#newsfeed">
-              <i class="material-icons">fiber_new</i>
-            </a>
-          </li>
-          <!--Amigos-->
-          <li class="tab col s3 m4 l4">
-            <a href="#friends">
-              <i class="material-icons">person_add</i>
-            </a>
-          </li>
-          <!--Búsqueda-->
-          <li class="tab col s3 m4 l4">
-            <a href="#search">
-              <i class="material-icons">search</i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--Fin Pestañas-->
-    </div>
-  </section>
-  <!--Fin Tabs-->
-
-  <!--Newsfeed-->
-  <section id="newsfeed" class="section container">
-    <div class="section">
-      <!--Área de posteo-->
-      <div class="row">
-        <div class="card-content col s12 m12">
-          <!--Foto del usuario-->
-          <div class="col s3 m3">
-            <img class="circle responsive-img valign-wrapper" src="../assets/images/user-data/user.jpg" alt="foto del usuario">
-          </div>
-          <div class="col s7 m7">
-            <h5 class="black-text">Hanna Dick</h5>
-          </div>
-          <!--Escribir posts-->
-          <div class="col s10 m10">
-            <div class="input-field black-text">
-              <textarea id="text-post" class="materialize-textarea" placeholder="¿Qué haces?"></textarea>
-              <label for="text-post"></label>
-            </div>
-          </div>
-          <!--Botones POSTEAR - ADD PHOTO -->
-          <div class="card-action col s2 m2 file-field">
-            <button class="btn-floating waves-effect waves-light teal accent-4" type="submit" name="action" id="btn-post">
-              <i class="material-icons right">send</i>
-            </button>
-            <button class="btn-floating waves-effect waves-light teal accent-4" type="submit" name="action" id="add-photo">
-              <i class="material-icons right">add_a_photo</i>
-              <input type="file">
-            </button>
-            <div class="card-title file-path-wrapper hide input-file">
-              <input class="file-path validate " disabled type="text">
-              <span class="btn send-photo">OK</span>
-              <!-- <input type="file" name="file" id="file"> -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Fin Área de posteo-->
-    </div>
-
-    <div class="divider"></div>
-    <div class="section" id="container-post">
-      <!--Agrega posts mediante DOM-->
-      <div class="row">
-      </div>
-      <!--Post predeterminados-->
-      <div class="row">
-        <div class="col s12 m12">
-          <div class="card">
-            <div class="col s12 m12">
-              <div class="col s2 m2">
-                <img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user3.jpg" alt="foto del usuario">
-              </div>
-              <div class="col s8 m8">
-                <label for="user-post" class="black-text">
-                  <h5 class="name-color">¿Un hijo diferente?</h5>
-                </label>
-              </div>
-            </div>
-            <!--Imagen del post-->
-            <div class="card-image">
-              <img src="../assets/images/posts/1.jpg">
-            </div>
-            <!--Texto del post-->
-            <div class="card-content">
-              <p>Pablo Pineda: Yo les diría que reacciones como el miedo o la incertidumbre ante el futuro son normales pero
-                hay que darles la vuelta y pensar que es un reto para ellos y que por tanto hay que intentarlo y no pensar
-                tanto en el futuro.</p>
-              <a target="_blank" href="https://espanol.babycenter.com/a13500046/las-frutas-y-verduras-en-tu-alimentaci%C3%B3n-durante-el-embarazo"></a>
-            </div>
-            <!--Botones de interacción-->
-            <div class="card-action right-align">
-              <a href="#">
-                <i class="material-icons def-color heart">favorite</i>
-              </a>
-              <a href="#">
-                <i class="material-icons def-color">comment</i>
-              </a>
-              <a href="#">
-                <i class="material-icons def-color">share</i>
-              </a>
-            </div>
-          </div>
-  </section>
-  <!--Fin Newsfeed-->
-
-  <!--AGREGAR AMIGOS-->
-  <section id="friends" class="container">
-    <!--Buscador de Amigos y/o Marcas-->
-    <div class="row">
-      <div class="input-field col s12 m12">
-        <i class="material-icons prefix">search</i>
-        <input id="input-contact" placeholder="Buscar amigos..." type="text" class="active validate" required />
-        <label for="name"></label>
-      </div>
-    </div>
-    <div id="container-contactos" class="row">
-    </div>
-  </section>
-  <!--Fin agregar amigos-->
-
-  <!--Búsqueda y Blogs-->
-  <section id="search" class="container">
-    <!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
-
-    <div class="row input-search">
-      <div class="input-field col s12">
-        <input placeholder="Placeholder" id="search-post" type="text" class="validate">
-        <label for="first_name">Filtra entre lo más POPULAR, COMENTADO y MÁS VISTO</label>
-      </div>
-    </div>
-    <div class="row" id="container-posts">
-    </div>
-
-  </section>
-  <!-- Modal poste -->
-  <div id="modal-post" class="modal">
-    <div id="margen" class="modal-content">
-      <div class="row icon-close">
-        <div class="col s1 offset-s10">
-          <a href="#!" class="modal-action modal-close">
-            <i class="material-icons">close</i>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m12">
-          <div class="card">
-            <div class="col s3 m3">
-              <img class="circle responsive-img user-post margin-user">
-            </div>
-            <div class="col s8 m8">
-              <h5 class="name name-color"></h5>
-            </div>
-            <div class="card-image">
-              <img class="image">
-            </div>
-            <div class="card-content">
-              <p class="description"></p>
-            </div>
-            <div class="card-action center">
-              <a href="#">
-                <i class="material-icons def-color heart">favorite</i>
-              </a>
-              <a href="#">
-                <i class="material-icons def-color">comment</i>
-              </a>
-              <a href="#">
-                <i class="material-icons def-color">share</i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!-- Enlace a Materialize compilado y minificado-->
-  <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
-  <!-- Librería moment.js -->
-  <script type="text/javascript" src="../vendors/moment/moment.js"></script>
-  <!-- Enlace a archivo JavaScript externo -->
-  <script type="text/javascript" src="../js/data.js"></script>
-  <!-- Enlace a archivo JavaScript externo -->
-  <script type="text/javascript" src="../js/home.js"></script>
+	<section id="splash" class="cyan lighten-5 valign-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<div class="col s6 offset-s3">
+						<img class="responsive-img" src="assets/images/logo-completo.png" alt="logo">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="content" class="cyan lighten-5 vh100">
+		<nav class="fixed-top white">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo red-text center">momby</a>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col s10 offset-s1">
+					<img class="responsive-img mom" src="assets/images/mom.png" alt="mamá">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s10 offset-s1">
+					<p class="center slogan red-text">¿Quién mejor que otra madre para entenderte y aconsejarte?</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<form class="center">
+						<a class="waves-effect waves-light btn modal-trigger" href="#modal-SignUp">Regístrate</a>
+						<a class="waves-effect waves-light btn modal-trigger" href="#modal-LogIn">Inicia Sesión</a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Modal REGISTRATE -->
+		<div id="modal-SignUp" class="modal">
+			<div class="modal-content">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="email" type="email" class="validate">
+							<label for="email">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field">
+							<i class="material-icons prefix">https</i>
+							<input id="password" type="password" class="validate">
+							<label for="password">Password</label>
+						</div>
+					</div>
+					<p class="center">
+						<input type="checkbox" id="indeterminate-checkbox" />
+						<label for="indeterminate-checkbox">Acepto los términos y condiciones</label>
+					</p>
+					<div class="row">
+						<div class="center">
+							<a id="sign-up" class="waves-effect waves-light btn disabled">Register</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Salir</a>
+			</div>
+		</div>
+		<!-- Modal INICIA SESIÓN -->
+		<div id="modal-LogIn" class="modal">
+			<div class="modal-content">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="email2" type="email" class="validate">
+							<label for="email2">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field">
+							<i class="material-icons prefix">https</i>
+							<input id="password2" type="password" class="validate">
+							<label for="password2">Password</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="center">
+							<a id="log-in" class="waves-effect waves-light btn">Log in</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Salir</a>
+			</div>
+		</div>
+	</section>
+	<!-- Enlace a jQuery compilado y minificado-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Enlace a Materialize compilado y minificado-->
+	<script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
+	<!-- link a la data -->
+	<script src="js/data.js"></script>
+	<!-- Enlace a archivo JavaScript externo -->
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>
