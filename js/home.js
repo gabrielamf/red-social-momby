@@ -1,10 +1,13 @@
 $(document).ready(function() {
+  // Muestra menú lateral en side nav
   $('.button-collapse').sideNav();
 
+  // Selecciona elementos
   var area = $('#text-post');
   var publish = $('#btn-post');
   var containerPost = $('#container-post');
-
+  
+  // Añade evento para crear posts
   $(publish).on('click', function(event) {
     // Creamos elementos    
     var comment = $(area).val();
@@ -22,7 +25,6 @@ $(document).ready(function() {
     var hora = moment().format('LLL');
     var infoHour = '<p>' + hora + '</p>';
     var textPost = 
-    // '<p class="col s8 m8">' + comment + moment().format('LLL') + '</p>';
       '<div class="card-content">' +
         '<p class="col s12 m12">' + comment + '</p>' +
       '</div>';
@@ -51,68 +53,31 @@ $(document).ready(function() {
     //   $(this).attr('disabled', 'true');
     // }
   });
-});
 
-// button write
-var elem = $('.fixed-action-btn');
-$('.modal').modal();
-
-// funcion para filtrado
-var container = $('#container-posts');
-for (i = 0; i < data.length; i++) {
-  var grupo = 
-    '<div class="col s6 collection">' +
-      '<img class="responsive-img modal-trigger" href="#modal-post" src=' + data[i].image + '>' +
-      '<p class="">' + data[i].name + '</p>' +
-    '</div>';
-  container.append(grupo);
-}
-	
-// filtro
-$('#search').keyup(function(event) {
-  console.log(event.target);
-  var name = $(this).val();
-  $('.collection').hide();
-  $('.collection').each(function() {
-    var search = $(this).text().toLowerCase();
-    if (search.indexOf(name) !== -1) {
-      $(this).show();
-    }
-  $(publish).on('click', function() {
-    if (area.val()) {
-      var textPost = $('<p/>', {
-        'class': 'text-post'
-      });
-      $(containerPost).append(textPost);
-      textPost.html();
-    }
-  });
-
-  // button write
-  var elem = $('.fixed-action-btn');
+  // genera modal
   $('.modal').modal();
-  
+
   // funcion para filtrado
   var container = $('#container-posts');
   for (i = 0; i < data.length; i++) {
     var grupo = 
-  '<div class="col s6 collection card-image card-border" data-type=' + data[i].type + ' >' + 
-    '<div class="card">' +
-      '<div class="card-image">' +
-      '<img id="post-height" class="responsive-img modal-trigger content" data-name =' + data[i].name + ' data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
-    '</div>' +
-    '<div class="card-content">' +
-    '<p>' + data[i].name + '</p>' +
-    '</div>' +
-  '</div>';
+   '<div class="col s6 m4 l3 collection card-image card-border hoverable" data-type=' + data[i].type + ' >' + 
+     '<div class="card">' +
+       '<div class="card-image">' +
+       '<img id="post-height" class="responsive-img modal-trigger content" data-name =' + data[i].name + ' data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
+     '</div>' +
+     '<div class="card-content">' +
+     '<p>' + data[i].name + '</p>' +
+     '</div>' +
+   '</div>';
     container.append(grupo);
   }
-
+ 
   $('.heart').click(function(event) {
     console.log(event.target);
     $(this).toggleClass('favorite');
   });
-    
+     
   // FILTRO DE POSTS
   $('#search-post').keyup(function() {
     var name = $(this).val().toLowerCase();
@@ -131,14 +96,14 @@ $('#search').keyup(function(event) {
       }
     });
   });
-
+ 
   // MODAL
   $('.content').click(function() {
     var name = $(this).data('name'),
       image = $(this).data('image'),
       description = $(this).data('description'),
       user = $(this).data('user');
-      
+       
     $('.name').text(name);
     $('.image').attr('src', image);
     $('.description').text(description);
