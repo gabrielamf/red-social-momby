@@ -17,7 +17,7 @@
 
 <body>
 	<!--Header-->
-	<header>
+  <header>
 		<nav>
 			<nav class="nav-wrapper white">
 				<a href="#!" class="brand-logo">
@@ -255,8 +255,8 @@
 		<!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
 
 		<div class="row input-search">
-			<div class="input-field col s12">
-				<input placeholder="Placeholder" id="search" type="text" class="validate">
+		  <div class="input-field col s12">
+				<input placeholder="Placeholder" id="search-post" type="text" class="validate">
 				<label for="first_name">Filtra entre lo más POPULAR, COMENTADO y MÁS VISTO</label>
 			</div>
 		</div>
@@ -264,41 +264,49 @@
 		<div class="row" id="container-posts">
 		</div>
 	</section>
-	<!-- Modal poste -->
-	<div id="modal-post" class="modal">
-		<div class="modal-content">
-			<div class="row">
-				<div class="col s12 m12">
-					<div class="card">
-						<!--Datos del usuario del post-->
-						<div class="col s2 m2">
-							<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/users-post/user1.jpg" alt="foto del usuario">
-						</div>
-						<div class="col s8 m8">
-							<label for="user-post">
-								<h5>Nutrición y Salud</h5>
-							</label>
-						</div>
-						<!--Imagen del post-->
-						<div class="card-image">
-							<img src="../assets/images/posts/1.jpg">
-						</div>
-						<!--Texto del post-->
-						<div class="card-content">
-							<p>Feliz Año 2018!!</p>
-						</div>
-						<!--Botones de interacción-->
-						<div class="card-action center">
-							<a href="#">
-								<i class="material-icons">favorite_border</i>
-							</a>
-							<a href="#">
-								<i class="material-icons">comment</i>
-							</a>
-							<a href="#">
-								<i class="material-icons">share</i>
-							</a>
-						</div>
+		  <!-- Modal poste -->
+			<div id="modal-post" class="modal">
+					<div id="margen" class="modal-content">
+            <div class="row icon-close">
+              <div class="col s1 offset-s9">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons right-align">close</i></a>
+              </div>
+            </div>
+							<div class="row">
+									<div class="col s12 m12">
+										<div class="card">
+											<!--Datos del usuario del post-->
+											<div class="col s2 m2">
+												<img class="circle responsive-img valign-wrapper user-post margin-user" alt="foto del usuario">
+											</div>
+											<div class="col s8 m8">
+												<label for="user-post">
+													<h5 class="name name-color"></h5>
+												</label>
+											</div>
+											<!--Imagen del post-->
+											<div class="card-image">
+												<img class="image">
+											</div>
+											<!--Texto del post-->
+											<div class="card-content">
+												<p class="description"></p>
+											</div>
+											<!--Botones de interacción-->
+											<div class="card-action center">
+												<a href="#">
+													<i class="material-icons heart">favorite</i>
+												</a>
+												<a href="#">
+													<i class="material-icons">comment</i>
+												</a>
+												<a href="#">
+													<i class="material-icons">share</i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
 					</div>
 				</div>
 			</div>
