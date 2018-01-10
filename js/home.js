@@ -8,7 +8,8 @@ $(document).ready(function() {
   var containerPost = $('#container-post');
   var addPhoto = $('#add-photo');
   var sendPhoto = $('.send-photo');
-  var inputPhoto = $('.validate');
+  var inputPhoto = $('.input-file');
+
   // Añade evento al botón 'publish' para crear posts
   $(publish).on('click', function(event) {
     // Creamos elementos    
@@ -54,29 +55,27 @@ $(document).ready(function() {
     // }
   });
 
-  // Añade evento al botón 'publishPhoto' para crear posts
+  // Añade evento al botón 'addPhoto' para crear posts con imagen
   $(addPhoto).on('click', function(event) {
-    $('.file-path-wrapper').attr({'class': 'show-on-small'});
-    $('sendPhoto').on('click', function() {
-      // Creamos elementos   
-      // var photo = ; 
-      var infoUser = 
-        '<div class="row">' + 
-          '<div class="col s2 m2">' + 
-            '<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/user-data/user.jpg" alt="foto del usuario">' +
-          '</div>' +
-          '<div class="col s10 m10">' + 
-            '<label for="user-post" class="black-text">' +
-              '<h5>Hanna Dick</h5>' +
-            '</label>' +
-          '</div>' + 
-        '</div>';
-     // var hora = moment().format('LLL');
-      // var infoHour = '<p>' + hora + '</p>';
-      var img = 
+    console.log(inputPhoto);
+    // muestra el nombre del archivo a subir y botón OK.
+    $(inputPhoto).attr({'class': 'show-on-small'});
+    // crea elementos
+    var infoUser = 
+            '<div class="row">' + 
+              '<div class="col s2 m2">' + 
+                '<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/user-data/user.jpg" alt="foto del usuario">' +
+              '</div>' +
+              '<div class="col s10 m10">' + 
+                '<label for="user-post" class="black-text">' +
+                  '<h5>Hanna Dick</h5>' + moment().format('LLL') +
+                '</label>' +
+              '</div>' + 
+            '</div>';
+    var img = 
         '<div class="card-content col s12 m12">' + photo +
         '</div>';
-      var buttons =
+    var buttons =
         '<div class="card-action right-align">' +
           '<a href="#">' +
             '<i class="material-icons red-text lighten-3-text">favorite_border</i>' +
@@ -88,22 +87,37 @@ $(document).ready(function() {
             '<i class="material-icons red-text lighten-3-text">share</i>' +
           '</a>' +
         '</div>';
-      
-      if (inputPhoto) {
-        var containerNewPost = '<div class="row"><div class="col s12 m12"><div class="card">' + infoUser + img + buttons + '</div></div></div>';
-        
-        $(containerPost).prepend(containerNewPost);
-  
-        $(area).val('');
-        $(area).focus();
-      } 
-      // else {
-      //   $(this).attr('disabled', 'true');
-      // }*/
+    
+    var photo = new FileReader(); 
+    $(photo).on('load', function(e) {
+      $(img).attr({'src': e.target.result});
+    });
+   
+    $(sendPhoto).on('click', function() {
+      var postImg = '<div class="row"><div class="col s12 m12"><div class="card">' + infoUser + img + buttons + '</div></div></div>';
+    
+      $(containerPost).prepend(postImg);
     });
   });
+  //     var photo = new FileReader();console.log(photo);
 
-  // genera modal
+  //     // $('inputPhoto[type=file]').change(function() {
+  //     //   var file = (this.files[0].toString);
+  //     //   // permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona
+  //     //   var reader = new FileReader();
+
+  //     //   $(inputPhoto).text('');
+  //     //   $(inputPhoto).text(file);
+        
+  //       // $(reader).onload(function(e){
+  //       //   $('#preview img').attr({'src', e.target.result});
+  //       // });
+
+  //       //reader.readAsDataURL(this.files[0]);
+  //     });
+
+
+  // Genera modal
   $('.modal').modal();
 
   // funcion para filtrado
