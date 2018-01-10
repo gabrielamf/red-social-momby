@@ -86,14 +86,14 @@ $(document).ready(function() {
 
   $email2.on('input', function() {
     if ($(this).val() === localStorage.email) {
-      alert('pasa');
+      // alert('pasa');
       validateEmail2 = true;
     }
   });
 
   $password2.on('input', function() {
     if ($(this).val() === localStorage.password) {
-      alert('esto tambien pasa');
+      // alert('esto tambien pasa');
       validatePassword2 = true;
     }
   });
@@ -101,10 +101,9 @@ $(document).ready(function() {
   $buttonLogIn.on('click', function(event) {
     event.preventDefault();
     if (validateEmail2 && validatePassword2) {
-      alert('Oh my gad!! You are papanuelll Yupi!!');
-      // window.location.href = '../views/home.html';
+      window.location.href = '../views/home.html';
     } else {
-      alert('Oh no, you need register');
+      alert('Por favor, nesecitas registrarte');
     }
   });
 });
