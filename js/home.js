@@ -23,7 +23,7 @@ $(document).ready(function() {
   var container = $('#container-posts');
   for (i = 0; i < data.length; i++) {
     var grupo = 
-  '<div class="col s6 collection card-image card-border" data-type=' + data[i].type + ' >' + 
+  '<div class="col s6 m4 l3 collection card-image card-border hoverable" data-type=' + data[i].type + ' >' + 
     '<div class="card">' +
       '<div class="card-image">' +
       '<img id="post-height" class="responsive-img modal-trigger content" data-name =' + data[i].name + ' data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
