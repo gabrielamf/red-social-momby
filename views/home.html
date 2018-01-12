@@ -131,7 +131,7 @@
             </button>
             <button class="btn-floating waves-effect waves-light teal accent-4" type="submit" name="action" id="add-photo">
               <i class="material-icons right">add_a_photo</i>
-              <input type="file">
+              <input type="file" name="inputPhoto" value="" id="inputPhoto" accept="image/*">
             </button>
             <div class="card-title file-path-wrapper hide input-file">
               <input class="file-path validate " disabled type="text">
@@ -143,7 +143,7 @@
       </div>
       <!--Fin Área de posteo-->
     </div>
-
+    <div id="divImagenes"></div>
     <div class="divider"></div>
     <div class="section" id="container-post">
       <!--Agrega posts mediante DOM-->
@@ -267,6 +267,8 @@
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <!-- Enlace a archivo JavaScript externo -->
   <script type="text/javascript" src="../js/app.js"></script>
+  <!-- Enlace a archivo externo para subir imagenes -->
+  <script type="text/javascript" src="../js/img-upload.js"></script>
   <!-- Enlace a Materialize compilado y minificado-->
   <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Librería moment.js -->

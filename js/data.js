@@ -5,6 +5,7 @@ var data = [{
   'type': 'popular',
   'user': '../assets/images/users-post/user1.jpeg',
   'contact': 'Maria Flores',
+  'info':'https://www.hola.com/ninos/2015070779801/pablo-pineda-entrevista/'
 },
 {
   'name': '¿Un hijo diferente?',
@@ -13,6 +14,7 @@ var data = [{
   'type': 'popular',
   'user': '../assets/images/users-post/user2.jpg',
   'contact': 'Mayra Alvarez',
+  'info':'https://www.hola.com/ninos/2015070779801/pablo-pineda-entrevista/'
 },
 {
   'name': 'Clasificación',
@@ -21,6 +23,7 @@ var data = [{
   'type': ' popular',
   'user': '../assets/images/users-post/user3.jpg',
   'contact': 'Patricia León',
+  'info':'http://www.monografias.com/trabajos93/ninos-habilidades-especiales/ninos-habilidades-especiales.shtml'
 },
 {
   'name': 'Programas',
@@ -29,6 +32,7 @@ var data = [{
   'type': 'comentado',
   'user': '../assets/images/users-post/user4.jpeg',
   'contact': 'Jennifer Urrutia',
+  'info': 'https://elcomercio.pe/lima/reconocen-programa-sinfonia-inclusiva-ninos-habilidades-especiales-424649',
 },
 {
   'name': 'Situación actual',
@@ -37,6 +41,7 @@ var data = [{
   'type': 'comentado',
   'user': '../assets/images/users-post/user5.jpg',
   'contact': 'Astrid Martínez',
+  'info': 'https://www.humanium.org/es/ninos-discapacitados/',
 },
 {
   'name': 'Educación',
@@ -45,6 +50,7 @@ var data = [{
   'type': 'comentado',
   'user': '../assets/images/users-post/user6.jpg',
   'contact': 'Rosa Serpa',
+  'info': 'https://www.guiainfantil.com/blog/salud/sindrome-de-down/ninos-con-discapacidad-o-ninos-con-capacidades-diferentes/',
 },
 {
   'name': 'Autismo: causas',
@@ -53,6 +59,7 @@ var data = [{
   'type': 'mas-visto',
   'user': '../assets/images/users-post/user8.jpg',
   'contact': 'Jessica Pérez',
+  'info': 'https://www.vanguardia.com.mx/articulo/como-ayudar-los-ninos-con-capacidades-diferentes-o-problemas-de-aprendizaje/',
 },
 {
   'name': 'Niños y retos',
@@ -61,6 +68,7 @@ var data = [{
   'type': 'mas-visto',
   'user': '../assets/images/users-post/user9.jpeg',
   'contact': 'Raquel Gonzáles',
+  'info': 'http://www.prensalibre.com/vida/salud-y-familia/los-retos-de-los-nios-con-capacidades-diferentes',
 },
 {
   'name': '¿Cómo ayudar?',
@@ -69,5 +77,6 @@ var data = [{
   'type': 'mas-visto',
   'user': '../assets/images/users-post/user10.jpg',
   'contact': 'Victoria Rivas',
+  'info': 'http://www.mychildwithoutlimits.org/understand/autism/what-causes-autism/?lang=es',
 },
 ];

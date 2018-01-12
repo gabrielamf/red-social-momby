@@ -173,7 +173,7 @@ $('.button-collapse').sideNav();
   });
 
   // Añade evento al botón 'addPhoto' para crear posts con imagen
-  $(addPhoto).on('click', function(event) {
+  /*$(https://github.com/NelidaSh/PRODUCTO-FINAL/blob/master/js/img.js).on('click', function(event) {
     console.log(inputPhoto);
     // muestra el nombre del archivo a subir y botón OK.
     $(inputPhoto).attr({'class': 'show-on-small'});
@@ -215,7 +215,7 @@ $('.button-collapse').sideNav();
     
       $(containerPost).prepend(postImg);
     });
-  });
+  });*/
 
 
   // Genera modal
@@ -242,7 +242,7 @@ $('.button-collapse').sideNav();
     var name = $(this).val().toLowerCase();
     $('.collection').hide();
     $('.collection').each(function() {
-      var search = $(this).text();
+      var search = $(this).text().toLowerCase();
       if (search.indexOf(name) !== -1) { // filtrado por nombre
         $(this).show();
       }
@@ -277,7 +277,7 @@ $('.button-collapse').sideNav();
 
   // FILTRO DE CONTACTOS
   $('#input-contact').keyup(function() {
-    var name = $(this).val();
+    var name = $(this).val().toLowerCase();
     $('.collection2').hide();
     $('.collection2').each(function() {
       var search = $(this).text().toLowerCase();
