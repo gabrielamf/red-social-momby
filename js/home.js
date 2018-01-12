@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/* $(document).ready(function() {
   // Muestra menú lateral en side nav
   $('.button-collapse').sideNav();
 
@@ -187,4 +187,4 @@ $(document).ready(function() {
     $('.description').text(description);
     $('.user-post').attr('src', user);
   });
-});
+});*/
