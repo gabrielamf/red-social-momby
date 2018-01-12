@@ -3,107 +3,82 @@ $(document).ready(function() {
   $('select').material_select();
   $('.button-collapse').sideNav();
   $('.modal').modal();
-	
+  
   // splash
   $('#content').toggle();
   setTimeout(function() {
     $('#splash').delay().fadeOut(1000);
     $('#content').toggle();
-  }, 3000);
-	
-  // VALIDACIÓN REGISTRATE
-  var $email = $('#email');
-  var $password = $('#password');
-  var $checked = $('#indeterminate-checkbox');
+  }, 1000);
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAczKOqhEEOO6n5OIs8XL4-BvaEn7QfnHg",
+    authDomain: "red-social-momby.firebaseapp.com",
+    databaseURL: "https://red-social-momby.firebaseio.com",
+    projectId: "red-social-momby",
+    storageBucket: "red-social-momby.appspot.com",
+    messagingSenderId: "1096411966178"
+  };
+
+  firebase.initializeApp(config);
+
+  function IngresoGoogle() {
+    // alert('hi');
+    if (!firebase.auth().currentUser) {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope('https://www.googleapis.com/auth/plus.login');
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        window.location.href = 'views/home.html';
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        if (errorcode === 'auth/account-exists-with-different-credential') {
+          alert('Es el mismo usuario');
+        }
+      });
+    } else {
+      firebase.auth().signOut();
+    }
+  };
+
+  function IngresoFacebook() {
+    // alert('hi');
+    if (!firebase.auth().currentUser) {
+      var provider = new firebase.auth.FacebookAuthProvider();
+      provider.addScope('public_profile');
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // console.log(user);
+        window.location.href = 'views/home.html';
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        if (errorCode === 'auth/account-exists-with-different-credential') {
+          alert('Es el mismo usuario');
+        }
+      });
+    } else {
+      firebase.auth().signOut();
+    }
+  };
   
-  var validateEmail = false;
-  var validatePassword = false; 
-  var validateChecked = false;  
-
-  // Aqui indicar que se puede implementar la función como variable
-  function activeButton() {
-    if (validateEmail && validatePassword && validateChecked) {
-      $('#sign-up').removeClass('disabled');
-    }
-  }
-
-  function desactiveButton() {
-    $('#sign-up').addClass('disabled');
-  } 
-
-  $email.on('input', function(event) {
-    // console.log(event.target.value);
-    var REGEXEMAIL = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
-    console.log(REGEXEMAIL.test($(this).val()));
-    console.log($(this).val());
-    if (REGEXEMAIL.test($(this).val())) {
-      validateEmail = true;
-      activeButton(); 
-    } else {
-      desactiveButton();
-    }
-  });
-
-  $password.on('input', function() {
-    console.log($(this).val());
-    if ($(this).val()) {
-      validatePassword = true;
-      activeButton(); 
-    } else {
-      desactiveButton(); 
-    }
-  });
- 
-  $checked.on('click', function(event) {
-    if (event.target.checked) {
-      validateChecked = true;
-      activeButton();
-    } else {
-      desactiveButton();
-    }
-  });
- 
-  $('#sign-up').on('click', function(event) {
-    event.preventDefault();
-    localStorage.email = $email.val();
-    localStorage.password = $password.val();
-    alert('Felicitaciones, te haz registrado con éxito. Puedes iniciar sesión');
-    // window.location.href = 'views/home.html';
-  });
-	
-  // VALIDACIÓN INICIA SESIÓN
-  var $email2 = $('#email2');
-  var $password2 = $('#password2');
-  var $buttonLogIn = $('#log-in');
-
-  // variable booleanas para la activación del boton  
-  var validateEmail2 = false;
-  var validatePassword2 = false; 
-
-  // llamamos a los valores guardados en el localStorage
-  console.log(localStorage.email);
-  console.log(localStorage.password);
-
-  $email2.on('input', function() {
-    if ($(this).val() === localStorage.email) {
-      // alert('pasa');
-      validateEmail2 = true;
-    }
-  });
-
-  $password2.on('input', function() {
-    if ($(this).val() === localStorage.password) {
-      // alert('esto tambien pasa');
-      validatePassword2 = true;
-    }
-  });
-
-  $buttonLogIn.on('click', function(event) {
-    event.preventDefault();
-    if (validateEmail2 && validatePassword2) {
-      window.location.href = 'views/home.html';
-    } else {
-      alert('Por favor, nesecitas registrarte');
-    }
-  });
+  $('#btn-google').on('click', IngresoGoogle);
+  $('#btn-facebook').on('click', IngresoFacebook);
+  
 });
