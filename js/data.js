@@ -5,7 +5,7 @@ var data = [{
   'type': 'popular',
   'user': '../assets/images/users-post/user1.jpeg',
   'contact': 'Maria Flores',
-  'info':'https://www.hola.com/ninos/2015070779801/pablo-pineda-entrevista/'
+  'info': 'https://goo.gl/CAqTdx',
 },
 {
   'name': '¿Un hijo diferente?',
@@ -14,7 +14,7 @@ var data = [{
   'type': 'popular',
   'user': '../assets/images/users-post/user2.jpg',
   'contact': 'Mayra Alvarez',
-  'info':'https://www.hola.com/ninos/2015070779801/pablo-pineda-entrevista/'
+  'info': 'https://goo.gl/CAqTdx'
 },
 {
   'name': 'Clasificación',
@@ -23,7 +23,7 @@ var data = [{
   'type': ' popular',
   'user': '../assets/images/users-post/user3.jpg',
   'contact': 'Patricia León',
-  'info':'http://www.monografias.com/trabajos93/ninos-habilidades-especiales/ninos-habilidades-especiales.shtml'
+  'info': 'https://goo.gl/nfE1eL',
 },
 {
   'name': 'Programas',
@@ -32,7 +32,7 @@ var data = [{
   'type': 'comentado',
   'user': '../assets/images/users-post/user4.jpeg',
   'contact': 'Jennifer Urrutia',
-  'info': 'https://elcomercio.pe/lima/reconocen-programa-sinfonia-inclusiva-ninos-habilidades-especiales-424649',
+  'info': 'https://goo.gl/d646br',
 },
 {
   'name': 'Situación actual',
@@ -50,16 +50,16 @@ var data = [{
   'type': 'comentado',
   'user': '../assets/images/users-post/user6.jpg',
   'contact': 'Rosa Serpa',
-  'info': 'https://www.guiainfantil.com/blog/salud/sindrome-de-down/ninos-con-discapacidad-o-ninos-con-capacidades-diferentes/',
+  'info': 'https://goo.gl/tDjnGf',
 },
 {
   'name': 'Autismo: causas',
   'image': '../assets/images/posts/7.jpg',
-  'description': 'Los expertos aún no están seguros de todas las causas del autismo. Lo más seguro es que haya causas múltiples en vez de sólo una. Parece ser que un número de circunstancias diversas, que incluyen factores ambientales, biológicos y genéticos, sientan las bases para el autismo y hacen que un niño/a sea más propenso a padecer el trastorno.',
+  'description': 'Los expertos aún no están seguros de todas las causas del autismo. Lo más seguro es que haya causas múltiples en vez de sólo una.',
   'type': 'mas-visto',
   'user': '../assets/images/users-post/user8.jpg',
   'contact': 'Jessica Pérez',
-  'info': 'https://www.vanguardia.com.mx/articulo/como-ayudar-los-ninos-con-capacidades-diferentes-o-problemas-de-aprendizaje/',
+  'info': 'https://goo.gl/wcJoEa',
 },
 {
   'name': 'Niños y retos',
@@ -68,15 +68,15 @@ var data = [{
   'type': 'mas-visto',
   'user': '../assets/images/users-post/user9.jpeg',
   'contact': 'Raquel Gonzáles',
-  'info': 'http://www.prensalibre.com/vida/salud-y-familia/los-retos-de-los-nios-con-capacidades-diferentes',
+  'info': 'https://goo.gl/DwJuCn',
 },
 {
   'name': '¿Cómo ayudar?',
   'image': '../assets/images/posts/9.jpg',
-  'description': 'Por experiencia propia, sé que el hecho de recibir la noticia de que tu hijo no es como los otros pequeños, sino que tendrá que lidiar de por vida con algunas dificultades para leer, escribir, comprender textos o gestos; hablar, hacer cuentas y relacionarse con sus compañeros, es difícil de comprender y asumir, y en no pocas ocasiones puede resultar devastadora.',
+  'description': 'Por experiencia propia, sé que el hecho de recibir la noticia de que tu hijo no es como los otros pequeños, es difícil de comprender y asumir, y en no pocas ocasiones puede resultar devastadora.',
   'type': 'mas-visto',
   'user': '../assets/images/users-post/user10.jpg',
   'contact': 'Victoria Rivas',
-  'info': 'http://www.mychildwithoutlimits.org/understand/autism/what-causes-autism/?lang=es',
+  'info': 'https://goo.gl/Z8zz11',
 },
 ];
