@@ -83,7 +83,7 @@ $(document).ready(function() {
   $('#btn-facebook').on('click', IngresoFacebook);
 
   var $userName = $('.username');
-  // var $userEmail = $('.directionMail');
+  var $userEmail = $('.directionMail');
   var $userProfile = $('.user-profile');
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -95,7 +95,7 @@ $(document).ready(function() {
       var uid = user.uid;
       console.log(user);
       $userName.text(name);
-      // $userEmail.text(email);
+      $userEmail.text(email);
       $userProfile.attr('src', photoUrl);
     } else {
       // No user is signed in.
