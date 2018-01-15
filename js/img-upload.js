@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-  alert('hola');
+  // alert('hola');
   var tablaDeBaseDatos = firebase.database().ref('Imagenes');
   $('#inputPhoto').change(function(event) {
     // alert('funcionando');
@@ -25,13 +25,30 @@ window.addEventListener('load', function() {
       var objeto = event.val();
       if (objeto.url !== null) {
         // Agregamos las imagenes que se encuentran en la base de datos
-        $('#divImagenes').prepend('<img src="' + objeto.urlLarge + '"/>');
+        $('#divImagenes').prepend(
+          '<div class="card">' + 
+            '<div class=" card-image">' +
+              '<img  class="img-height" src="' + objeto.urlLarge + '"/>' + 
+            '</div>' +
+          '</div>' + 
+          '<div class="card-action right-align">' +
+            '<a href="#">' +
+            '<i class="material-icons def-color heart">favorite</i>' +
+            '</a>' +
+            '<a href="#">' +
+            '<i class="material-icons def-color">comment</i>' +
+            '</a>' +
+            '<a href="#">' +
+            '<i class="material-icons def-color">share</i>' +
+            '</a>' +
+          '</div>'
+        );
       }
     });
   });
 });
 
-/*function begin() {
+/* function begin() {
   var tablaDeBaseDatos = firebase.database().ref('Imagenes');
   $('#inputPhoto').change(function(event) {
     // alert('funcionando');

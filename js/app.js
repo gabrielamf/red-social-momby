@@ -14,12 +14,12 @@ $(document).ready(function() {
 
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyAczKOqhEEOO6n5OIs8XL4-BvaEn7QfnHg",
-    authDomain: "red-social-momby.firebaseapp.com",
-    databaseURL: "https://red-social-momby.firebaseio.com",
-    projectId: "red-social-momby",
-    storageBucket: "red-social-momby.appspot.com",
-    messagingSenderId: "1096411966178"
+    apiKey: 'AIzaSyAczKOqhEEOO6n5OIs8XL4-BvaEn7QfnHg',
+    authDomain: 'red-social-momby.firebaseapp.com',
+    databaseURL: 'https://red-social-momby.firebaseio.com',
+    projectId: 'red-social-momby',
+    storageBucket: 'red-social-momby.appspot.com',
+    messagingSenderId: '1096411966178'
   };
 
   firebase.initializeApp(config);
@@ -83,7 +83,7 @@ $(document).ready(function() {
   $('#btn-facebook').on('click', IngresoFacebook);
 
   var $userName = $('.username');
-  // var $userEmail = $('.directionMail');
+  var $userEmail = $('.directionMail');
   var $userProfile = $('.user-profile');
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -95,7 +95,7 @@ $(document).ready(function() {
       var uid = user.uid;
       console.log(user);
       $userName.text(name);
-      // $userEmail.text(email);
+      $userEmail.text(email);
       $userProfile.attr('src', photoUrl);
     } else {
       // No user is signed in.
@@ -116,8 +116,8 @@ $(document).ready(function() {
   });
 
   // --------------> HOME <----------------------------
-// Muestra menú lateral en side nav
-$('.button-collapse').sideNav();
+  // Muestra menú lateral en side nav
+  $('.button-collapse').sideNav();
 
   // Selecciona elementos
   var area = $('#text-post');
@@ -131,17 +131,6 @@ $('.button-collapse').sideNav();
   $(publish).on('click', function(event) {
     // Creamos elementos    
     var comment = $(area).val();
-    var infoUser = 
-      '<div class="row">' + 
-        '<div class="col s2 m2">' + 
-          '<img class="circle responsive-img" src="../assets/images/users-post/user1.jpeg" alt="foto del usuario">' +
-        '</div>' +
-        '<div class="col s10 m10">' + 
-          '<label class="black-text">' +
-            '<h5>Gabriela User</h5>' + moment().format('LLL') +
-          '</label>' +
-        '</div>' + 
-      '</div>';
     var textPost = 
       '<div class="card-content">' +
         '<p class="col s12 m12">' + comment + '</p>' +
@@ -149,74 +138,25 @@ $('.button-collapse').sideNav();
     var buttons =
       '<div class="card-action right-align">' +
         '<a href="#">' +
-          '<i class="material-icons red-text lighten-3-text">favorite_border</i>' +
+          '<i class="material-icons def-color heart">favorite</i>' +
         '</a>' +
         '<a href="#">' +
-          '<i class="material-icons red-text lighten-3-text">comment</i>' +
+          '<i class="material-icons def-color">comment</i>' +
         '</a>' +
         '<a href="#">' +
-          '<i class="material-icons red-text lighten-3-text">share</i>' +
+          '<i class="material-icons def-color">share</i>' +
         '</a>' +
       '</div>';
-    
+
     if ($(area).val()) {
-      var containerNewPost = '<div class="row"><div class="col s12 m12"><div class="card">' + infoUser + textPost + buttons + '</div></div></div>';
+      var containerNewPost = '<div class="row"><div class="col s12 m12"><div class="card">' + textPost + buttons + '</div></div></div>';
       
       $(containerPost).prepend(containerNewPost);
 
       $(area).val('');
       $(area).focus();
     } 
-    // else {
-    //   $(this).attr('disabled', 'true');
-    // }
   });
-
-  // Añade evento al botón 'addPhoto' para crear posts con imagen
-  /*$(https://github.com/NelidaSh/PRODUCTO-FINAL/blob/master/js/img.js).on('click', function(event) {
-    console.log(inputPhoto);
-    // muestra el nombre del archivo a subir y botón OK.
-    $(inputPhoto).attr({'class': 'show-on-small'});
-    // crea elementos
-    var infoUser = 
-            '<div class="row">' + 
-              '<div class="col s2 m2">' + 
-                '<img class="circle responsive-img valign-wrapper user-post" src="../assets/images/user-data/user.jpg" alt="foto del usuario">' +
-              '</div>' +
-              '<div class="col s10 m10">' + 
-                '<label for="user-post" class="black-text">' +
-                  '<h5>Hanna Dick</h5>' + moment().format('LLL') +
-                '</label>' +
-              '</div>' + 
-            '</div>';
-    var img = 
-        '<div class="card-content col s12 m12">' + photo +
-        '</div>';
-    var buttons =
-        '<div class="card-action right-align">' +
-          '<a href="#">' +
-            '<i class="material-icons red-text lighten-3-text">favorite_border</i>' +
-          '</a>' +
-          '<a href="#">' +
-            '<i class="material-icons red-text lighten-3-text">comment</i>' +
-          '</a>' +
-          '<a href="#">' +
-            '<i class="material-icons red-text lighten-3-text">share</i>' +
-          '</a>' +
-        '</div>';
-    
-    var photo = new FileReader(); 
-    $(photo).on('load', function(e) {
-      $(img).attr({'src': e.target.result});
-    });
-    
-    $(sendPhoto).on('click', function() {
-      var postImg = '<div class="row"><div class="col s12 m12"><div class="card">' + infoUser + img + buttons + '</div></div></div>';
-    
-      $(containerPost).prepend(postImg);
-    });
-  });*/
-
 
   // Genera modal
   $('.modal').modal();
@@ -228,7 +168,7 @@ $('.button-collapse').sideNav();
   '<div class="col s6 m4 l3 collection card-image card-border hoverable" data-type=' + data[i].type + ' >' + 
     '<div class="card">' +
       '<div class="card-image">' +
-      '<img id="post-height" class="responsive-img modal-trigger content" data-name ="' + data[i].name + '" data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
+      '<img id="post-height" class="responsive-img modal-trigger content" data-name ="' + data[i].name + '" data-image =' + data[i].image + ' data-user =' + data[i].user + ' data-info =' + data[i].info + ' data-description = "' + data[i].description + '" href="#modal-post" src=' + data[i].image + '>' +
     '</div>' +
     '<div class="card-content espaciado">' +
     '<p class="name-color">' + data[i].name + '</p>' +
@@ -298,11 +238,12 @@ $('.button-collapse').sideNav();
       image = $(this).data('image'),
       description = $(this).data('description'),
       user = $(this).data('user');
+    info = $(this).data('info');
         
     $('.name').text(name);
     $('.image').attr('src', image);
     $('.description').text(description);
     $('.user-post').attr('src', user);
+    $('.info').text(info);
   });
-  
 });

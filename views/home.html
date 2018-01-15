@@ -27,8 +27,8 @@
         <ul id="slide-out" class="side-nav">
           <li>
             <div class="user-view">
-              <div class="background">
-                <img src="../assets/images/user-data/portada.jpg">
+              <div>
+                <img class="background" src="../assets/images/user-data/portada.jpg">
               </div>
               <a href="#!user">
                 <img class="circle user-profile">
@@ -37,7 +37,7 @@
                 <span class="white-text name username"></span>
               </a>
               <a href="#!email">
-                <span class="white-text email">hdick@gmail.com</span>
+                <span class="white-text directionMail"></span>
               </a>
             </div>
           </li>
@@ -95,6 +95,12 @@
           <li class="tab col s3 m4 l4">
             <a href="#search">
               <i class="material-icons">search</i>
+            </a>
+          </li>
+          <!--Búsqueda-->
+          <li class="tab col s3 m4 l4">
+            <a href="#message">
+              <i class="material-icons">message</i>
             </a>
           </li>
         </ul>
@@ -208,7 +214,6 @@
   <!--Búsqueda y Blogs-->
   <section id="search" class="container">
     <!-- BUSCADOR: MÁS POPULAR, MÁS COMENTADO, MÁS VISTO-->
-
     <div class="row input-search">
       <div class="input-field col s12">
         <input placeholder="Placeholder" id="search-post" type="text" class="validate">
@@ -217,8 +222,46 @@
     </div>
     <div class="row" id="container-posts">
     </div>
-
   </section>
+
+  <!-- Chat -->
+  <section id="message" class="container">
+    <div class="row">
+      <div class="col s12">
+        <!-- inicio de la caja de chat con bootstrap -->
+        <div class="col s12">
+          <div class="panel panel-primary">
+            <div class="panel-body">
+              <ul class="chat-bd"> </ul>
+            </div>
+            <div class="panel-footer">
+              <div class="input-group">
+                <input id="mensaje" type="text" class="form-control input-sm" placeholder="Escribe un mensaje..."/>
+                <span class="input-group-btn">
+                  <button class="btn btn-warning btn-sm" id="btnEnviar">Enviar</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Fin de la caja de chat con bootstrap -->
+        <!-- template del item del chat (Oculto: para agarrar un clon y llenarlo e insertar en el chat)-->
+        <li style="display:none" id="plantilla">
+          <span class="chat-img">
+            <img src="http://placehold.it/50/55C1E7/fff&text=U"/>
+          </span>
+          <div class="chat-body">
+            <div class="header">
+              <strong class="primary-font nombre">Jack Sparrow</strong>
+              <small><span class="glyphicon glyphicon-asterisk tiempo"></span></small>
+            </div>
+            <p class="mensaje">Mensaje</p>
+          </div>
+        </li>
+      </div>
+    </div>
+  </section>
+
   <!-- Modal poste -->
   <div id="modal-post" class="modal">
     <div id="margen" class="modal-content">
@@ -243,6 +286,8 @@
             </div>
             <div class="card-content">
               <p class="description"></p>
+              <p class="margin-mp teal-text">Encuentra mas información aquí:</p>
+              <a class="info"></a>
             </div>
             <div class="card-action center">
               <a href="#">
@@ -269,6 +314,8 @@
   <script type="text/javascript" src="../js/app.js"></script>
   <!-- Enlace a archivo externo para subir imagenes -->
   <script type="text/javascript" src="../js/img-upload.js"></script>
+  <!-- Enlace a archivo externo para el chat -->
+  <script type="text/javascript" src="../js/chat.js"></script>
   <!-- Enlace a Materialize compilado y minificado-->
   <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Librería moment.js -->
