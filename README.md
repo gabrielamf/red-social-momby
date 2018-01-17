@@ -14,6 +14,32 @@ El presente repositorio contiene el producto final del Sprint 3 de nuesto _bootc
 
 * Se realizó entre las fechas del Lunes 8 de Enero del 2017 al Miércoles 10 de Enero del 2018.
 
+__FLUJO DE TRABAJO__
+
+Flujo de Trabajo - Momby
+* Viernes 05/01/18:
+  - Indicaciones del Producto Final.
+
+* Sábado 06/01/18 y Domingo 07/01/18:
+  - Buscar tema de red social.
+  - Investigación del tema.
+  - Sketching.
+  - Entrevistas a usuarios.
+
+* Lunes 08/01/18:
+  - Maquetado con Html y Css.
+  - Login con firebase(pruebas).
+
+* Martes 09/01/18:
+  - Agregar Funcionalidad.
+
+* Miércoles 10/01/18:
+  - Readme.
+  - gh-pages.
+  - Corregir fallas.
+  - Intentar una vez más Login con Firebase.
+
+
 ## Presentación
 
 *Momby* es una Red Social, dirigida a madres que tienen hijos con habilidades especiales, se genera una red de apoyo entre las madres acorde a las dificultades y necesidades que conlleva el proceso de la crianza y educación de un niño(a) con diferentes habilidades.
