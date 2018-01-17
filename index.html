@@ -17,6 +17,14 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=141812879802159';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
   <section id="splash" class="cyan lighten-5 valign-wrapper">
     <div class="container">
       <div class="row">
@@ -130,6 +138,7 @@
   <script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
   <!-- link a la data -->
   <script src="js/data.js"></script>
+  <div class="fb-comments"></div>
 </body>
 
 </html>
